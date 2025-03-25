@@ -94,16 +94,24 @@
         }
 
         /* Testimoni */
+        .testimoni-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
         .testimoni {
             background: white;
             color: black;
             padding: 20px;
-            margin: 20px auto;
             border-radius: 10px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-            max-width: 500px;
-            font-size: 18px;
+            max-width: 300px;
+            font-size: 16px;
             position: relative;
+            text-align: left;
         }
 
         .fade {
@@ -121,6 +129,7 @@
             background: #333;
             color: white;
             font-size: 14px;
+            margin-top: 20px;
         }
 
         /* Responsif */
@@ -128,6 +137,10 @@
             .hero img {
                 width: 100px;
                 height: 100px;
+            }
+
+            .testimoni {
+                max-width: 100%;
             }
         }
     </style>
@@ -160,9 +173,21 @@
     </div>
 
     <!-- Testimoni -->
-    <div class="testimoni" id="testimoni-box">
-        <h2>Testimoni Klien</h2>
-        <p id="testimoni-text">Mengambil data testimoni...</p>
+    <div class="testimoni-container">
+        <div class="testimoni" id="testimoni-box-1">
+            <h3>Testimoni 1</h3>
+            <p id="testimoni-text-1">Mengambil data testimoni...</p>
+        </div>
+
+        <div class="testimoni" id="testimoni-box-2">
+            <h3>Testimoni 2</h3>
+            <p id="testimoni-text-2">Mengambil data testimoni...</p>
+        </div>
+
+        <div class="testimoni" id="testimoni-box-3">
+            <h3>Testimoni 3</h3>
+            <p id="testimoni-text-3">Mengambil data testimoni...</p>
+        </div>
     </div>
 
     <!-- Footer -->
@@ -171,31 +196,23 @@
     </div>
 
     <script>
-        // Waktu Real-time
+        // Fungsi untuk memperbarui waktu
         function updateTime() {
             const now = new Date();
-            const days = ["Minggu", "Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu"];
-            const months = ["Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "Oktober", "November", "Desember"];
-
-            let day = days[now.getDay()];
-            let date = now.getDate();
-            let month = months[now.getMonth()];
-            let year = now.getFullYear();
-            let hours = now.getHours().toString().padStart(2, '0');
-            let minutes = now.getMinutes().toString().padStart(2, '0');
-            let seconds = now.getSeconds().toString().padStart(2, '0');
-
-            document.getElementById("time-status").innerText = `Waktu: ${day}, ${date} ${month} ${year} - ${hours}:${minutes}:${seconds}`;
+            const timeString = now.toLocaleString("id-ID", { weekday: "long", day: "numeric", month: "long", year: "numeric", hour: "2-digit", minute: "2-digit", second: "2-digit" });
+            document.getElementById("time-status").innerText = `Waktu: ${timeString}`;
         }
+        setInterval(updateTime, 1000);
+        updateTime();
 
-        // Status Baterai
+        // Fungsi untuk memperbarui status baterai
         function updateBattery() {
             if ('getBattery' in navigator) {
                 navigator.getBattery().then(battery => {
                     function updateBatteryStatus() {
-                        let chargingStatus = battery.charging ? "Sedang diisi" : "Tidak diisi";
-                        let batteryLevel = Math.round(battery.level * 100);
-                        document.getElementById("battery-status").innerText = `Baterai: ${batteryLevel}% (${chargingStatus})`;
+                        let status = battery.charging ? "Sedang diisi" : "Tidak diisi";
+                        let level = Math.round(battery.level * 100);
+                        document.getElementById("battery-status").innerText = `Baterai: ${level}% (${status})`;
                     }
                     updateBatteryStatus();
                     battery.addEventListener('chargingchange', updateBatteryStatus);
@@ -205,40 +222,34 @@
                 document.getElementById("battery-status").innerText = "Baterai: Tidak didukung";
             }
         }
-
-        // Testimoni
-        let testimoniList = [];
-        let index = 0;
-
-        async function fetchTestimoni() {
-            try {
-                const response = await fetch("testimoni.txt");
-                const text = await response.text();
-                testimoniList = text.split("\n").map(t => t.trim()).filter(t => t !== "");
-                if (testimoniList.length > 0) {
-                    updateTestimoni();
-                    setInterval(updateTestimoni, 4000);
-                } else {
-                    document.getElementById("testimoni-text").innerText = "Tidak ada testimoni.";
-                }
-            } catch (error) {
-                console.error("Gagal mengambil testimoni:", error);
-                document.getElementById("testimoni-text").innerText = "Gagal memuat testimoni.";
-            }
-        }
-
-        function updateTestimoni() {
-            document.getElementById("testimoni-text").classList.add("fade");
-            document.getElementById("testimoni-text").innerText = testimoniList[index];
-            index = (index + 1) % testimoniList.length;
-            setTimeout(() => document.getElementById("testimoni-text").classList.remove("fade"), 900);
-        }
-
-        setInterval(updateTime, 1000);
-        updateTime();
         updateBattery();
-        fetchTestimoni();
+
+        // Fungsi untuk mengambil dan mengganti testimoni
+        function fetchTestimoni(file, elementId) {
+            fetch(file)
+                .then(response => response.text())
+                .then(text => {
+                    let testimoniList = text.split("\n").filter(t => t.trim() !== "");
+                    let index = 0;
+
+                    function update() {
+                        document.getElementById(elementId).classList.add("fade");
+                        document.getElementById(elementId).innerText = testimoniList[index];
+                        index = (index + 1) % testimoniList.length;
+                        setTimeout(() => document.getElementById(elementId).classList.remove("fade"), 900);
+                    }
+
+                    if (testimoniList.length > 0) {
+                        update();
+                        setInterval(update, 4000);
+                    }
+                });
+        }
+
+        fetchTestimoni("testimoni.txt", "testimoni-text-1");
+        fetchTestimoni("testimoni2.txt", "testimoni-text-2");
+        fetchTestimoni("testimoni3.txt", "testimoni-text-3");
     </script>
 
 </body>
-            </html>
+    </html>
