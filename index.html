@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio Akbar</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        /* Reset Style */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        
+        body {
+            background-color: #111;
+            color: #fff;
+            text-align: center;
+        }
+
+        /* Navbar */
+        .navbar {
+            background: #222;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar h2 {
+            color: yellow;
+        }
+
+        .info {
+            font-size: 14px;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 20px;
+            background: linear-gradient(135deg, #ff512f, #dd2476);
+            border-radius: 10px;
+            margin: 20px;
+            position: relative;
+        }
+
+        .hero img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-top: -50px;
+            border: 3px solid #fff;
+        }
+
+        .hero h1 {
+            font-size: 24px;
+            margin: 10px 0;
+        }
+
+        .hero p {
+            font-size: 16px;
+            opacity: 0.8;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background: yellow;
+            color: black;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        /* Tentang Saya */
+        .section {
+            padding: 20px;
+            margin-top: 20px;
+            background: #1a1a1a;
+            border-radius: 10px;
+        }
+
+        .section h2 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        /* Layanan */
+        .services {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            padding: 20px;
+        }
+
+        .service-box {
+            background: #333;
+            padding: 15px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .service-box:hover {
+            background: #ff512f;
+            transform: scale(1.05);
+        }
+
+        /* Testimoni */
+        .testimonials {
+            background: #1a1a1a;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 10px;
+        }
+
+        .testimonial-slide {
+            display: none;
+            font-size: 16px;
+            font-style: italic;
+        }
+
+        .testimonial-slide.active {
+            display: block;
+        }
+
+        /* Footer */
+        .footer {
+            margin-top: 20px;
+            padding: 15px;
+            background: #000;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <h2>⚡ Portofolio</h2>
+        <div class="info">
+            <span id="battery"></span> | 
+            <span id="time"></span> | 
+            <span id="date"></span>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <img src="https://source.unsplash.com/100x100/?person" alt="Foto Profil">
+        <h1>Akbar</h1>
+        <p>Web Developer | UI/UX Designer | Freelancer</p>
+        <a href="https://wa.me/6287825946251" class="btn">Hubungi Saya</a>
+    </div>
+
+    <!-- Tentang Saya -->
+    <div class="section">
+        <h2>Tentang Saya</h2>
+        <p>Saya seorang Web Developer & UI/UX Designer dengan pengalaman lebih dari 5 tahun. Fokus pada desain modern, interaktif, dan berkualitas tinggi.</p>
+    </div>
+
+    <!-- Layanan -->
+    <div class="services">
+        <div class="service-box">
+            <i class="fas fa-code"></i> Website Development
+        </div>
+        <div class="service-box">
+            <i class="fas fa-paint-brush"></i> UI/UX Design
+        </div>
+        <div class="service-box">
+            <i class="fas fa-mobile-alt"></i> Mobile App Design
+        </div>
+    </div>
+
+    <!-- Testimoni -->
+    <div class="testimonials">
+        <h2>Testimoni</h2>
+        <div class="testimonial-slide active">⭐ "Pelayanan sangat cepat dan hasilnya luar biasa!" - Budi</div>
+        <div class="testimonial-slide">⭐ "Website yang dibuat sangat profesional dan responsif." - Rina</div>
+        <div class="testimonial-slide">⭐ "Sangat puas dengan desain UI/UX yang modern." - Dika</div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        © 2025 Akbar | <a href="mailto:jawirjago0@gmail.com" style="color: yellow; text-decoration: none;">Email Saya</a>
+    </div>
+
+    <script>
+        // Update waktu & tanggal secara real-time
+        function updateTime() {
+            let now = new Date();
+            let hours = now.getHours().toString().padStart(2, '0');
+            let minutes = now.getMinutes().toString().padStart(2, '0');
+            let seconds = now.getSeconds().toString().padStart(2, '0');
+            document.getElementById("time").innerText = `${hours}:${minutes}:${seconds}`;
+        }
+        setInterval(updateTime, 1000);
+        updateTime();
+
+        // Update tanggal
+        function updateDate() {
+            let now = new Date();
+            let options = { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' };
+            document.getElementById("date").innerText = now.toLocaleDateString("id-ID", options);
+        }
+        updateDate();
+
+        // Update baterai
+        function updateBattery() {
+            navigator.getBattery().then(function(battery) {
+                let level = Math.round(battery.level * 100);
+                document.getElementById("battery").innerText = `🔋 ${level}%`;
+            });
+        }
+        updateBattery();
+        setInterval(updateBattery, 60000);
+
+        // Testimoni Slider
+        let index = 0;
+        function showTestimonial() {
+            let slides = document.querySelectorAll('.testimonial-slide');
+            slides.forEach(slide => slide.classList.remove('active'));
+            slides[index].classList.add('active');
+            index = (index + 1) % slides.length;
+        }
+        setInterval(showTestimonial, 3000);
+    </script>
+
+</body>
+  </html>
