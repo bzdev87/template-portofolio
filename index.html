@@ -6,12 +6,12 @@
     <title>Portofolio Akbar</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <style>
-        /* CSS Tampilan */
+        /* UI/UX Super Modern */
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #111;
+            background-color: #121212;
             color: white;
             text-align: center;
         }
@@ -20,59 +20,66 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 15px;
-            background-color: #222;
+            padding: 15px 30px;
+            background: linear-gradient(to right, #ff416c, #ff4b2b);
+            box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
             font-weight: bold;
         }
 
         .hero {
-            padding: 50px;
+            padding: 60px;
             background: linear-gradient(to right, #6a11cb, #2575fc);
+            color: white;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
         }
 
-        .about, .profile, .testimoni-container, .contact {
-            padding: 30px;
-            background-color: #333;
-            margin: 20px;
-            border-radius: 10px;
+        .container {
+            padding: 40px;
         }
 
-        .testimoni-box {
-            background-color: #444;
-            padding: 20px;
-            margin: 10px;
-            border-radius: 8px;
+        .testimoni-container {
             display: flex;
-            flex-direction: column;
-            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .testimoni-card {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            width: 300px;
+            border-radius: 10px;
+            box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+            backdrop-filter: blur(10px);
+            transition: transform 0.3s ease;
+        }
+
+        .testimoni-card:hover {
+            transform: scale(1.05);
         }
 
         .testimoni-name {
             font-weight: bold;
-            font-size: 18px;
+            font-size: 20px;
             color: #FFD700;
         }
 
         .testimoni-profesi {
             font-style: italic;
             color: #ddd;
+            margin-bottom: 10px;
         }
 
         .testimoni-text {
-            margin-top: 10px;
             font-size: 16px;
             text-align: center;
             color: #fff;
         }
 
-        .contact ul {
-            list-style: none;
-            padding: 0;
-        }
-
         footer {
             padding: 10px;
             background-color: #222;
+            margin-top: 20px;
         }
     </style>
 </head>
@@ -86,31 +93,29 @@
 
     <section class="hero">
         <h1>Akbar - Web Developer</h1>
-        <p>Membuat website <a href="https://wa.me/6287825946251">Hubungi Saya</a></p>
+        <p>Membuat website <a href="https://wa.me/6287825946251" style="color: yellow; text-decoration: none;">Hubungi Saya</a></p>
     </section>
 
-    <section class="profile">
-        <h2>Profil Saya</h2>
-        <p>Halo, saya Akbar, seorang Web Developer dan UI/UX Designer dengan pengalaman lebih dari 5 tahun. Saya membantu bisnis dan individu dalam menciptakan website yang profesional dan menarik.</p>
-    </section>
-
-    <section class="about">
-        <h2>Tentang Saya</h2>
-        <p>Ikuti saya di media sosial:</p>
-        <ul>
-            <li><a href="https://wa.me/6287825946251"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
-            <li><a href="https://instagram.com/dash1.id"><i class="fab fa-instagram"></i> Instagram</a></li>
-            <li><a href="https://facebook.com/barzxsta"><i class="fab fa-facebook"></i> Facebook</a></li>
-            <li><a href="mailto:jawirjago0@gmail.com"><i class="fas fa-envelope"></i> Email</a></li>
-        </ul>
-    </section>
-
-    <section class="testimoni-container">
+    <section class="container">
         <h2>Testimoni</h2>
-        <div class="testimoni-box">
-            <span class="testimoni-name" id="testimoni-nama">Memuat...</span>
-            <span class="testimoni-profesi" id="testimoni-profesi">Memuat...</span>
-            <p class="testimoni-text" id="testimoni-text">Memuat testimoni...</p>
+        <div class="testimoni-container">
+            <div class="testimoni-card">
+                <span class="testimoni-name" id="testimoni1-nama">Memuat...</span>
+                <span class="testimoni-profesi" id="testimoni1-profesi">Memuat...</span>
+                <p class="testimoni-text" id="testimoni1-text">Memuat testimoni...</p>
+            </div>
+
+            <div class="testimoni-card">
+                <span class="testimoni-name" id="testimoni2-nama">Memuat...</span>
+                <span class="testimoni-profesi" id="testimoni2-profesi">Memuat...</span>
+                <p class="testimoni-text" id="testimoni2-text">Memuat testimoni...</p>
+            </div>
+
+            <div class="testimoni-card">
+                <span class="testimoni-name" id="testimoni3-nama">Memuat...</span>
+                <span class="testimoni-profesi" id="testimoni3-profesi">Memuat...</span>
+                <p class="testimoni-text" id="testimoni3-text">Memuat testimoni...</p>
+            </div>
         </div>
     </section>
 
@@ -119,7 +124,6 @@
     </footer>
 
     <script>
-        // Update Waktu & Baterai
         function updateTime() {
             const now = new Date();
             const days = ['Minggu', 'Senin', 'Selasa', 'Rabu', 'Kamis', 'Jumat', 'Sabtu'];
@@ -140,22 +144,25 @@
         setInterval(updateTime, 1000);
         updateBattery();
 
-        // Load Testimoni Random Setiap 1 Detik
         async function loadTestimoni() {
             const files = ["testimoni.txt", "testimoni2.txt", "testimoni3.txt"];
+            let elements = [
+                { name: "testimoni1-nama", profesi: "testimoni1-profesi", text: "testimoni1-text" },
+                { name: "testimoni2-nama", profesi: "testimoni2-profesi", text: "testimoni2-text" },
+                { name: "testimoni3-nama", profesi: "testimoni3-profesi", text: "testimoni3-text" }
+            ];
 
-            setInterval(async () => {
-                let randomFile = files[Math.floor(Math.random() * files.length)];
-                let response = await fetch(randomFile);
+            for (let i = 0; i < 3; i++) {
+                let response = await fetch(files[i]);
                 let text = await response.text();
                 let lines = text.split("\n").filter(line => line.trim() !== "");
 
                 if (lines.length >= 3) {
-                    document.getElementById("testimoni-nama").innerText = lines[0]; // Nama
-                    document.getElementById("testimoni-profesi").innerText = lines[1]; // Profesi
-                    document.getElementById("testimoni-text").innerText = `"${lines[2]}"`; // Testimoni
+                    document.getElementById(elements[i].name).innerText = lines[0];
+                    document.getElementById(elements[i].profesi).innerText = lines[1];
+                    document.getElementById(elements[i].text).innerText = `"${lines[2]}"`;
                 }
-            }, 1000); // Update setiap 1 detik
+            }
         }
 
         loadTestimoni();
