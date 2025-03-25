@@ -6,7 +6,7 @@
     <title>Portofolio Akbar</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <style>
-        /* UI/UX Super Modern */
+        /* UI/UX Modern */
         body {
             font-family: 'Poppins', sans-serif;
             margin: 0;
@@ -51,10 +51,12 @@
             border-radius: 10px;
             box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
             backdrop-filter: blur(10px);
-            transition: transform 0.3s ease;
+            transition: transform 0.3s ease, opacity 0.5s ease;
+            opacity: 0;
         }
 
-        .testimoni-card:hover {
+        .testimoni-card.show {
+            opacity: 1;
             transform: scale(1.05);
         }
 
@@ -99,19 +101,19 @@
     <section class="container">
         <h2>Testimoni</h2>
         <div class="testimoni-container">
-            <div class="testimoni-card">
+            <div class="testimoni-card" id="testimoni1">
                 <span class="testimoni-name" id="testimoni1-nama">Memuat...</span>
                 <span class="testimoni-profesi" id="testimoni1-profesi">Memuat...</span>
                 <p class="testimoni-text" id="testimoni1-text">Memuat testimoni...</p>
             </div>
 
-            <div class="testimoni-card">
+            <div class="testimoni-card" id="testimoni2">
                 <span class="testimoni-name" id="testimoni2-nama">Memuat...</span>
                 <span class="testimoni-profesi" id="testimoni2-profesi">Memuat...</span>
                 <p class="testimoni-text" id="testimoni2-text">Memuat testimoni...</p>
             </div>
 
-            <div class="testimoni-card">
+            <div class="testimoni-card" id="testimoni3">
                 <span class="testimoni-name" id="testimoni3-nama">Memuat...</span>
                 <span class="testimoni-profesi" id="testimoni3-profesi">Memuat...</span>
                 <p class="testimoni-text" id="testimoni3-text">Memuat testimoni...</p>
@@ -147,25 +149,37 @@
         async function loadTestimoni() {
             const files = ["testimoni.txt", "testimoni2.txt", "testimoni3.txt"];
             let elements = [
-                { name: "testimoni1-nama", profesi: "testimoni1-profesi", text: "testimoni1-text" },
-                { name: "testimoni2-nama", profesi: "testimoni2-profesi", text: "testimoni2-text" },
-                { name: "testimoni3-nama", profesi: "testimoni3-profesi", text: "testimoni3-text" }
+                { id: "testimoni1", name: "testimoni1-nama", profesi: "testimoni1-profesi", text: "testimoni1-text" },
+                { id: "testimoni2", name: "testimoni2-nama", profesi: "testimoni2-profesi", text: "testimoni2-text" },
+                { id: "testimoni3", name: "testimoni3-nama", profesi: "testimoni3-profesi", text: "testimoni3-text" }
             ];
 
-            for (let i = 0; i < 3; i++) {
-                let response = await fetch(files[i]);
+            async function fetchTestimoni(index) {
+                let response = await fetch(files[index]);
                 let text = await response.text();
                 let lines = text.split("\n").filter(line => line.trim() !== "");
 
                 if (lines.length >= 3) {
-                    document.getElementById(elements[i].name).innerText = lines[0];
-                    document.getElementById(elements[i].profesi).innerText = lines[1];
-                    document.getElementById(elements[i].text).innerText = `"${lines[2]}"`;
+                    document.getElementById(elements[index].name).innerText = lines[0];
+                    document.getElementById(elements[index].profesi).innerText = lines[1];
+                    document.getElementById(elements[index].text).innerText = `"${lines[2]}"`;
                 }
+
+                let card = document.getElementById(elements[index].id);
+                card.classList.add("show");
+
+                setTimeout(() => {
+                    card.classList.remove("show");
+                    setTimeout(() => fetchTestimoni(index), 2000);
+                }, 2000);
+            }
+
+            for (let i = 0; i < 3; i++) {
+                fetchTestimoni(i);
             }
         }
 
         loadTestimoni();
     </script>
 </body>
-</html>
+    </html>
