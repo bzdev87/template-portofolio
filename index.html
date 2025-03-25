@@ -5,145 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portofolio Akbar</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <style>
-        /* Reset */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, sans-serif;
-        }
-
-        body {
-            background-color: #1a1a2e;
-            color: white;
-            text-align: center;
-            padding: 20px;
-        }
-
-        /* Status Bar */
-        .status-bar {
-            background: #222;
-            color: white;
-            padding: 5px;
-            font-size: 14px;
-        }
-
-        /* Navbar */
-        .navbar {
-            background: #333;
-            padding: 10px 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            color: white;
-        }
-
-        .navbar h2 {
-            font-size: 20px;
-        }
-
-        /* Hero */
-        .hero {
-            padding: 40px 20px;
-            background: linear-gradient(135deg, #ff512f, #dd2476);
-            border-radius: 10px;
-            margin: 20px auto;
-            max-width: 600px;
-        }
-
-        .hero img {
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 3px solid #fff;
-        }
-
-        .hero h1 {
-            font-size: 28px;
-            margin: 10px 0;
-            color: white;
-        }
-
-        .hero p {
-            font-size: 16px;
-            color: white;
-        }
-
-        .btn {
-            display: inline-block;
-            padding: 10px 20px;
-            background: yellow;
-            color: black;
-            text-decoration: none;
-            border-radius: 5px;
-            margin-top: 15px;
-            font-weight: bold;
-        }
-
-        /* Section */
-        .section {
-            padding: 20px;
-            background: white;
-            color: black;
-            margin: 20px auto;
-            border-radius: 10px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            max-width: 600px;
-        }
-
-        /* Testimoni */
-        .testimoni-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
-            margin-top: 20px;
-        }
-
-        .testimoni {
-            background: white;
-            color: black;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-            max-width: 300px;
-            font-size: 16px;
-            position: relative;
-            text-align: left;
-        }
-
-        .fade {
-            animation: fadeEffect 1s ease-in-out;
-        }
-
-        @keyframes fadeEffect {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-
-        /* Footer */
-        .footer {
-            padding: 15px;
-            background: #333;
-            color: white;
-            font-size: 14px;
-            margin-top: 20px;
-        }
-
-        /* Responsif */
-        @media (max-width: 600px) {
-            .hero img {
-                width: 100px;
-                height: 100px;
-            }
-
-            .testimoni {
-                max-width: 100%;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
@@ -155,14 +17,14 @@
 
     <!-- Navbar -->
     <div class="navbar">
-        <h2>⚡ Portofolio</h2>
+        <h1>⚡ Portofolio Akbar</h1>
     </div>
 
     <!-- Hero Section -->
     <div class="hero">
         <img src="20250114_175407.png" alt="Foto Profil">
-        <h1>Akbar</h1>
-        <p>Web Developer | UI/UX Designer | Freelancer</p>
+        <h1 id="typing-text"></h1>
+        <p id="typing-desc"></p>
         <a href="https://wa.me/6287825946251" class="btn">Hubungi Saya</a>
     </div>
 
@@ -174,20 +36,38 @@
 
     <!-- Testimoni -->
     <div class="testimoni-container">
-        <div class="testimoni" id="testimoni-box-1">
+        <div class="testimoni" id="testimoni-1">
             <h3>Testimoni 1</h3>
             <p id="testimoni-text-1">Mengambil data testimoni...</p>
         </div>
-
-        <div class="testimoni" id="testimoni-box-2">
+        <div class="testimoni" id="testimoni-2">
             <h3>Testimoni 2</h3>
             <p id="testimoni-text-2">Mengambil data testimoni...</p>
         </div>
-
-        <div class="testimoni" id="testimoni-box-3">
+        <div class="testimoni" id="testimoni-3">
             <h3>Testimoni 3</h3>
             <p id="testimoni-text-3">Mengambil data testimoni...</p>
         </div>
+    </div>
+
+    <!-- Timeline Pengalaman -->
+    <div class="section timeline">
+        <h2>Pengalaman & Pendidikan</h2>
+        <ul>
+            <li><b>2020 - Sekarang</b> | Web Developer di XYZ</li>
+            <li><b>2018 - 2020</b> | UI/UX Designer di ABC</li>
+        </ul>
+    </div>
+
+    <!-- Form Kontak -->
+    <div class="section">
+        <h2>Hubungi Saya</h2>
+        <form action="mailto:jawirjago0@gmail.com" method="post">
+            <input type="text" name="name" placeholder="Nama Anda" required>
+            <input type="email" name="email" placeholder="Email Anda" required>
+            <textarea name="message" placeholder="Pesan Anda"></textarea>
+            <button type="submit">Kirim</button>
+        </form>
     </div>
 
     <!-- Footer -->
@@ -195,61 +75,6 @@
         © 2025 Akbar | <a href="mailto:jawirjago0@gmail.com" style="color: yellow; text-decoration: none;">Email Saya</a>
     </div>
 
-    <script>
-        // Fungsi untuk memperbarui waktu
-        function updateTime() {
-            const now = new Date();
-            const timeString = now.toLocaleString("id-ID", { weekday: "long", day: "numeric", month: "long", year: "numeric", hour: "2-digit", minute: "2-digit", second: "2-digit" });
-            document.getElementById("time-status").innerText = `Waktu: ${timeString}`;
-        }
-        setInterval(updateTime, 1000);
-        updateTime();
-
-        // Fungsi untuk memperbarui status baterai
-        function updateBattery() {
-            if ('getBattery' in navigator) {
-                navigator.getBattery().then(battery => {
-                    function updateBatteryStatus() {
-                        let status = battery.charging ? "Sedang diisi" : "Tidak diisi";
-                        let level = Math.round(battery.level * 100);
-                        document.getElementById("battery-status").innerText = `Baterai: ${level}% (${status})`;
-                    }
-                    updateBatteryStatus();
-                    battery.addEventListener('chargingchange', updateBatteryStatus);
-                    battery.addEventListener('levelchange', updateBatteryStatus);
-                });
-            } else {
-                document.getElementById("battery-status").innerText = "Baterai: Tidak didukung";
-            }
-        }
-        updateBattery();
-
-        // Fungsi untuk mengambil dan mengganti testimoni
-        function fetchTestimoni(file, elementId) {
-            fetch(file)
-                .then(response => response.text())
-                .then(text => {
-                    let testimoniList = text.split("\n").filter(t => t.trim() !== "");
-                    let index = 0;
-
-                    function update() {
-                        document.getElementById(elementId).classList.add("fade");
-                        document.getElementById(elementId).innerText = testimoniList[index];
-                        index = (index + 1) % testimoniList.length;
-                        setTimeout(() => document.getElementById(elementId).classList.remove("fade"), 900);
-                    }
-
-                    if (testimoniList.length > 0) {
-                        update();
-                        setInterval(update, 4000);
-                    }
-                });
-        }
-
-        fetchTestimoni("testimoni.txt", "testimoni-text-1");
-        fetchTestimoni("testimoni2.txt", "testimoni-text-2");
-        fetchTestimoni("testimoni3.txt", "testimoni-text-3");
-    </script>
-
+    <script src="script.js"></script>
 </body>
-    </html>
+</html>
