@@ -4,77 +4,56 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portofolio Akbar</title>
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-    <!-- Status Bar -->
-    <div class="status-bar">
-        <span id="battery-status">Baterai: Mengambil data...</span> | 
-        <span id="time-status">Waktu: Loading...</span>
-    </div>
-
-    <!-- Navbar -->
     <div class="navbar">
-        <h1>⚡ Portofolio Akbar</h1>
+        <span>⚡ Portofolio Akbar</span>
+        <span id="battery-info">Baterai: Mengambil data...</span>
+        <span id="time-info">Waktu: ...</span>
     </div>
 
-    <!-- Hero Section -->
-    <div class="hero">
-        <img src="20250114_175407.png" alt="Foto Profil">
-        <h1 id="typing-text"></h1>
-        <p id="typing-desc"></p>
-        <a href="https://wa.me/6287825946251" class="btn">Hubungi Saya</a>
-    </div>
+    <section class="hero">
+        <h1>Akbar - Web Developer</h1>
+        <p>Membuat website <a href="https://wa.me/6287825946251">Hubungi Saya</a></p>
+    </section>
 
-    <!-- Tentang Saya -->
-    <div class="section">
+    <section class="about">
         <h2>Tentang Saya</h2>
         <p>Saya seorang Web Developer & UI/UX Designer dengan pengalaman lebih dari 5 tahun.</p>
-    </div>
+    </section>
 
-    <!-- Testimoni -->
-    <div class="testimoni-container">
-        <div class="testimoni" id="testimoni-1">
+    <section class="testimoni-container">
+        <div class="testimoni-box">
             <h3>Testimoni 1</h3>
-            <p id="testimoni-text-1">Mengambil data testimoni...</p>
+            <p id="testimoni1">Memuat testimoni...</p>
         </div>
-        <div class="testimoni" id="testimoni-2">
+        <div class="testimoni-box">
             <h3>Testimoni 2</h3>
-            <p id="testimoni-text-2">Mengambil data testimoni...</p>
+            <p id="testimoni2">Memuat testimoni...</p>
         </div>
-        <div class="testimoni" id="testimoni-3">
+        <div class="testimoni-box">
             <h3>Testimoni 3</h3>
-            <p id="testimoni-text-3">Mengambil data testimoni...</p>
+            <p id="testimoni3">Memuat testimoni...</p>
         </div>
-    </div>
+    </section>
 
-    <!-- Timeline Pengalaman -->
-    <div class="section timeline">
-        <h2>Pengalaman & Pendidikan</h2>
+    <section class="contact">
+        <h2>Kontak Saya</h2>
         <ul>
-            <li><b>2020 - Sekarang</b> | Web Developer di XYZ</li>
-            <li><b>2018 - 2020</b> | UI/UX Designer di ABC</li>
+            <li><i class="fab fa-whatsapp"></i> <a href="https://wa.me/6287825946251">WhatsApp</a></li>
+            <li><i class="fab fa-instagram"></i> <a href="https://instagram.com/dash1.id">@dash1.id</a></li>
+            <li><i class="fab fa-facebook"></i> <a href="https://facebook.com/barzxsta">Barzx Sta</a></li>
+            <li><i class="fas fa-envelope"></i> <a href="mailto:jawirjago0@gmail.com">jawirjago0@gmail.com</a></li>
         </ul>
-    </div>
+    </section>
 
-    <!-- Form Kontak -->
-    <div class="section">
-        <h2>Hubungi Saya</h2>
-        <form action="mailto:jawirjago0@gmail.com" method="post">
-            <input type="text" name="name" placeholder="Nama Anda" required>
-            <input type="email" name="email" placeholder="Email Anda" required>
-            <textarea name="message" placeholder="Pesan Anda"></textarea>
-            <button type="submit">Kirim</button>
-        </form>
-    </div>
-
-    <!-- Footer -->
-    <div class="footer">
-        © 2025 Akbar | <a href="mailto:jawirjago0@gmail.com" style="color: yellow; text-decoration: none;">Email Saya</a>
-    </div>
+    <footer>
+        &copy; 2025 Akbar | Portofolio Web Developer
+    </footer>
 
     <script src="script.js"></script>
 </body>
-</html>
+            </html>
