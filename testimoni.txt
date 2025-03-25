@@ -1,0 +1,567 @@
+Nama: Ananda Rizky
+Profesi: Owner Online Shop
+Testimoni: "Sistem yang dikembangkan sangat stabil dan performanya luar biasa!"
+---
+Nama: Rina Amelia
+Profesi: Freelancer
+Testimoni: "Web development yang dikerjakan sangat berkualitas. Performa cepat dan tampilan elegan!"
+---
+Nama: Bayu Setiawan
+Profesi: UI/UX Designer
+Testimoni: "Membantu saya dalam membangun portofolio untuk melamar beasiswa. Sangat direkomendasikan!"
+---
+Nama: Bayu Setiawan
+Profesi: UI/UX Designer
+Testimoni: "Website edukasi yang dibuat sangat interaktif dan informatif. Mahasiswa saya sangat terbantu!"
+---
+Nama: Silvia Anjani
+Profesi: Makeup Artist
+Testimoni: "Dashboard analisis yang dibuat sangat membantu dalam menyajikan data dengan lebih jelas!"
+---
+Nama: Aditya Ramadhan
+Profesi: Developer
+Testimoni: "E-commerce yang dibuat sangat user-friendly dan menarik pelanggan lebih banyak!"
+---
+Nama: Ridwan Pratama
+Profesi: Event Organizer
+Testimoni: "Website responsif dan sangat optimal di berbagai perangkat. Terima kasih banyak!"
+---
+Nama: Novi Susanti
+Profesi: Dokter
+Testimoni: "Website event yang dibuat sangat profesional dan memudahkan pengelolaan acara!"
+---
+Nama: Citra Anggraini
+Profesi: Pemilik Toko Online
+Testimoni: "Tampilan yang elegan dan profesional, sangat sesuai dengan branding saya!"
+---
+Nama: Citra Anggraini
+Profesi: Pemilik Toko Online
+Testimoni: "Web yang dibuat sangat profesional dan membantu saya dalam meningkatkan kepercayaan klien!"
+---
+Nama: Linda Febriani
+Profesi: Desainer Grafis
+Testimoni: "Website event yang dibuat sangat profesional dan memudahkan pengelolaan acara!"
+---
+Nama: Dewi Kartika
+Profesi: Fotografer
+Testimoni: "Desain e-commerce yang dibuat sangat profesional dan membantu bisnis saya berkembang!"
+---
+Nama: Angga Saputra
+Profesi: Game Developer
+Testimoni: "E-commerce yang dibuat sangat user-friendly dan menarik pelanggan lebih banyak!"
+---
+Nama: Wahyu Adi
+Profesi: Teknisi IT
+Testimoni: "Website musik yang dibuat sangat interaktif dan memudahkan fans mengakses karya saya."
+---
+Nama: Rina Amelia
+Profesi: Freelancer
+Testimoni: "Sangat menghargai detail dalam desain yang dibuat. UX-nya sangat nyaman!"
+---
+Nama: Wahyu Adi
+Profesi: Teknisi IT
+Testimoni: "Sistem yang dikembangkan sangat stabil dan performanya luar biasa!"
+---
+Nama: Reza Permana
+Profesi: Musisi
+Testimoni: "Website yang dibuat sangat ringan dan SEO-friendly. Traffic blog saya meningkat drastis!"
+---
+Nama: Rahmat Hidayat
+Profesi: Pebisnis
+Testimoni: "Kode yang dibuat bersih dan rapi. Sangat mudah untuk dikembangkan lebih lanjut!"
+---
+Nama: Linda Febriani
+Profesi: Desainer Grafis
+Testimoni: "Web yang dibuat sangat profesional dan membantu saya dalam meningkatkan kepercayaan klien!"
+---
+Nama: Budi Santoso
+Profesi: Pengusaha
+Testimoni: "Sangat menghargai detail dalam desain yang dibuat. UX-nya sangat nyaman!"
+---
+Nama: Silvia Anjani
+Profesi: Makeup Artist
+Testimoni: "Website event yang dibuat sangat profesional dan memudahkan pengelolaan acara!"
+---
+Nama: Rossa Amelia
+Profesi: Influencer
+Testimoni: "Sistem rekrutmen berbasis web yang dibuat sangat membantu dalam proses seleksi karyawan."
+---
+Nama: Siti Nurlaila
+Profesi: Digital Marketer
+Testimoni: "Website edukasi yang dibuat sangat interaktif dan informatif. Mahasiswa saya sangat terbantu!"
+---
+Nama: Farhan Maulana
+Profesi: Pelajar
+Testimoni: "Web yang dibuat sangat profesional dan membantu saya dalam meningkatkan kepercayaan klien!"
+---
+Nama: Budi Santoso
+Profesi: Pengusaha
+Testimoni: "Website edukasi yang dibuat sangat interaktif dan informatif. Mahasiswa saya sangat terbantu!"
+---
+Nama: Arif Wicaksono
+Profesi: Konsultan Bisnis
+Testimoni: "Tampilan yang bersih dan estetik membuat portofolio saya semakin menarik!"
+---
+Nama: Silvia Anjani
+Profesi: Makeup Artist
+Testimoni: "Portofolio saya jadi lebih menarik berkat desain yang profesional. Komunikasi juga sangat lancar!"
+---
+Nama: Silvia Anjani
+Profesi: Makeup Artist
+Testimoni: "Kode yang dibuat bersih dan rapi. Sangat mudah untuk dikembangkan lebih lanjut!"
+---
+Nama: Sari Purnamasari
+Profesi: Akuntan
+Testimoni: "Tampilan yang elegan dan profesional, sangat sesuai dengan branding saya!"
+---
+Nama: Siti Nurlaila
+Profesi: Digital Marketer
+Testimoni: "E-commerce yang dibuat sangat user-friendly dan menarik pelanggan lebih banyak!"
+---
+Nama: Andi Maulana
+Profesi: HR Manager
+Testimoni: "Sistem rekrutmen berbasis web yang dibuat sangat membantu dalam proses seleksi karyawan."
+---
+Nama: Ridwan Pratama
+Profesi: Event Organizer
+Testimoni: "E-commerce yang dibuat sangat user-friendly dan menarik pelanggan lebih banyak!"
+---
+Nama: Yulia Fitri
+Profesi: Data Analyst
+Testimoni: "Website galeri yang dibuat sangat estetik dan mudah digunakan. Klien saya sangat menyukainya!"
+---
+Nama: Novi Susanti
+Profesi: Dokter
+Testimoni: "Desain yang diberikan sangat sesuai dengan personal branding saya. Hasilnya luar biasa!"
+---
+Nama: Yulia Fitri
+Profesi: Data Analyst
+Testimoni: "Website konsultasi online yang dibuat sangat user-friendly dan membantu banyak pasien!"
+---
+Nama: Dimas Prasetyo
+Profesi: CEO Startup
+Testimoni: "Website company profile yang dibuat meningkatkan kredibilitas bisnis saya!"
+---
+Nama: Rina Amelia
+Profesi: Freelancer
+Testimoni: "Blog saya kini lebih menarik dan interaktif, banyak pembaca baru yang datang!"
+---
+Nama: Dewi Kartika
+Profesi: Fotografer
+Testimoni: "Sangat menghargai detail dalam desain yang dibuat. UX-nya sangat nyaman!"
+---
+Nama: Yulia Fitri
+Profesi: Data Analyst
+Testimoni: "Layanan luar biasa! Website yang dibuat sangat modern dan interaktif. Sangat puas dengan hasilnya!"
+---
+Nama: Denny Kurniawan
+Profesi: CEO Perusahaan Teknologi
+Testimoni: "Blog saya kini lebih menarik dan interaktif, banyak pembaca baru yang datang!"
+---
+Nama: Ridwan Pratama
+Profesi: Event Organizer
+Testimoni: "Website responsif dan sangat optimal di berbagai perangkat. Terima kasih banyak!"
+---
+Nama: Linda Febriani
+Profesi: Desainer Grafis
+Testimoni: "Landing page game yang dibuat sangat keren dan menarik perhatian banyak orang!"
+---
+Nama: Wahyu Adi
+Profesi: Teknisi IT
+Testimoni: "Sistem yang dikembangkan sangat stabil dan performanya luar biasa!"
+---
+Nama: Surya Pratama
+Profesi: Video Editor
+Testimoni: "Tampilan yang elegan dan profesional, sangat sesuai dengan branding saya!"
+---
+Nama: Rendy Saputra
+Profesi: Manajer IT
+Testimoni: "Blog saya kini lebih menarik dan interaktif, banyak pembaca baru yang datang!"
+---
+Nama: Dimas Prasetyo
+Profesi: CEO Startup
+Testimoni: "Tampilan yang elegan dan profesional, sangat sesuai dengan branding saya!"
+---
+Nama: Silvia Anjani
+Profesi: Makeup Artist
+Testimoni: "Website event yang dibuat sangat profesional dan memudahkan pengelolaan acara!"
+---
+Nama: Farhan Maulana
+Profesi: Pelajar
+Testimoni: "Website portofolio saya kini lebih profesional dan menarik klien baru!"
+---
+Nama: Handoko Wijaya
+Profesi: Dosen
+Testimoni: "Website galeri yang dibuat sangat estetik dan mudah digunakan. Klien saya sangat menyukainya!"
+---
+Nama: Citra Anggraini
+Profesi: Pemilik Toko Online
+Testimoni: "Tampilan yang bersih dan estetik membuat portofolio saya semakin menarik!"
+---
+Nama: Surya Pratama
+Profesi: Video Editor
+Testimoni: "Sangat puas dengan hasil desain UI/UX yang diberikan. Website jadi lebih user-friendly dan menarik!"
+---
+Nama: Wahyu Adi
+Profesi: Teknisi IT
+Testimoni: "Kode yang dibuat bersih dan rapi. Sangat mudah untuk dikembangkan lebih lanjut!"
+---
+Nama: Lestari Widodo
+Profesi: Penulis
+Testimoni: "Tampilan yang bersih dan estetik membuat portofolio saya semakin menarik!"
+---
+Nama: Budi Santoso
+Profesi: Pengusaha
+Testimoni: "E-commerce yang dibuat sangat user-friendly dan menarik pelanggan lebih banyak!"
+---
+Nama: Ridwan Pratama
+Profesi: Event Organizer
+Testimoni: "Web yang dibuat sangat profesional dan membantu saya dalam meningkatkan kepercayaan klien!"
+---
+Nama: Aditya Ramadhan
+Profesi: Developer
+Testimoni: "Web yang dibuat sangat profesional dan membantu saya dalam meningkatkan kepercayaan klien!"
+---
+Nama: Handoko Wijaya
+Profesi: Dosen
+Testimoni: "Website yang dibuat sangat ringan dan SEO-friendly. Traffic blog saya meningkat drastis!"
+---
+Nama: Farhan Maulana
+Profesi: Pelajar
+Testimoni: "Web yang dibuat sangat profesional dan membantu saya dalam meningkatkan kepercayaan klien!"
+---
+Nama: Dewi Kartika
+Profesi: Fotografer
+Testimoni: "Tampilan yang bersih dan estetik membuat portofolio saya semakin menarik!"
+---
+Nama: Denny Kurniawan
+Profesi: CEO Perusahaan Teknologi
+Testimoni: "Tampilan yang bersih dan estetik membuat portofolio saya semakin menarik!"
+---
+Nama: Andi Maulana
+Profesi: HR Manager
+Testimoni: "Blog saya kini lebih menarik dan interaktif, banyak pembaca baru yang datang!"
+---
+Nama: Dewi Kartika
+Profesi: Fotografer
+Testimoni: "Web development yang dikerjakan sangat berkualitas. Performa cepat dan tampilan elegan!"
+---
+Nama: Dewi Kartika
+Profesi: Fotografer
+Testimoni: "Website yang dibuat sangat rapi dan sesuai dengan kebutuhan bisnis saya."
+---
+Nama: Dimas Prasetyo
+Profesi: CEO Startup
+Testimoni: "Web development yang dikerjakan sangat berkualitas. Performa cepat dan tampilan elegan!"
+---
+Nama: Farhan Maulana
+Profesi: Pelajar
+Testimoni: "Sangat menghargai detail dalam desain yang dibuat. UX-nya sangat nyaman!"
+---
+Nama: Reza Permana
+Profesi: Musisi
+Testimoni: "Sangat menghargai detail dalam desain yang dibuat. UX-nya sangat nyaman!"
+---
+Nama: Gina Marlina
+Profesi: Arsitek
+Testimoni: "Sistem yang dikembangkan sangat stabil dan performanya luar biasa!"
+---
+Nama: Ananda Rizky
+Profesi: Owner Online Shop
+Testimoni: "Website company profile yang dibuat meningkatkan kredibilitas bisnis saya!"
+---
+Nama: Dewi Kartika
+Profesi: Fotografer
+Testimoni: "Sistem yang dikembangkan sangat stabil dan performanya luar biasa!"
+---
+Nama: Linda Febriani
+Profesi: Desainer Grafis
+Testimoni: "Kode yang dibuat bersih dan rapi. Sangat mudah untuk dikembangkan lebih lanjut!"
+---
+Nama: Arif Wicaksono
+Profesi: Konsultan Bisnis
+Testimoni: "Layanan profesional dan berkualitas tinggi. Tim sangat responsif dan solutif!"
+---
+Nama: Siti Nurlaila
+Profesi: Digital Marketer
+Testimoni: "Portofolio saya jadi lebih menarik berkat desain yang profesional. Komunikasi juga sangat lancar!"
+---
+Nama: Andi Maulana
+Profesi: HR Manager
+Testimoni: "Web yang dibuat sangat profesional dan membantu saya dalam meningkatkan kepercayaan klien!"
+---
+Nama: Dewi Kartika
+Profesi: Fotografer
+Testimoni: "Tampilan yang elegan dan profesional, sangat sesuai dengan branding saya!"
+---
+Nama: Dimas Prasetyo
+Profesi: CEO Startup
+Testimoni: "Website musik yang dibuat sangat interaktif dan memudahkan fans mengakses karya saya."
+---
+Nama: Jessica Putri
+Profesi: Content Creator
+Testimoni: "Layanan luar biasa! Website yang dibuat sangat modern dan interaktif. Sangat puas dengan hasilnya!"
+---
+Nama: Linda Febriani
+Profesi: Desainer Grafis
+Testimoni: "Desain e-commerce yang dibuat sangat profesional dan membantu bisnis saya berkembang!"
+---
+Nama: Andi Maulana
+Profesi: HR Manager
+Testimoni: "Portofolio saya jadi lebih menarik berkat desain yang profesional. Komunikasi juga sangat lancar!"
+---
+Nama: Aditya Ramadhan
+Profesi: Developer
+Testimoni: "Desain yang diberikan sangat sesuai dengan personal branding saya. Hasilnya luar biasa!"
+---
+Nama: Jessica Putri
+Profesi: Content Creator
+Testimoni: "Sistem yang dikembangkan sangat stabil dan performanya luar biasa!"
+---
+Nama: Wahyu Adi
+Profesi: Teknisi IT
+Testimoni: "E-commerce yang dibuat sangat user-friendly dan menarik pelanggan lebih banyak!"
+---
+Nama: Rendy Saputra
+Profesi: Manajer IT
+Testimoni: "Website musik yang dibuat sangat interaktif dan memudahkan fans mengakses karya saya."
+---
+Nama: Sari Purnamasari
+Profesi: Akuntan
+Testimoni: "Web development yang dikerjakan sangat berkualitas. Performa cepat dan tampilan elegan!"
+---
+Nama: Surya Pratama
+Profesi: Video Editor
+Testimoni: "Website konsultasi online yang dibuat sangat user-friendly dan membantu banyak pasien!"
+---
+Nama: Rossa Amelia
+Profesi: Influencer
+Testimoni: "Website responsif dan sangat optimal di berbagai perangkat. Terima kasih banyak!"
+---
+Nama: Rendy Saputra
+Profesi: Manajer IT
+Testimoni: "Dashboard analisis yang dibuat sangat membantu dalam menyajikan data dengan lebih jelas!"
+---
+Nama: Ananda Rizky
+Profesi: Owner Online Shop
+Testimoni: "Tampilan yang bersih dan estetik membuat portofolio saya semakin menarik!"
+---
+Nama: Kevin Wijaya
+Profesi: Pemilik Startup
+Testimoni: "Website company profile yang dibuat meningkatkan kredibilitas bisnis saya!"
+---
+Nama: Reza Permana
+Profesi: Musisi
+Testimoni: "Landing page game yang dibuat sangat keren dan menarik perhatian banyak orang!"
+---
+Nama: Ananda Rizky
+Profesi: Owner Online Shop
+Testimoni: "Web yang dibuat sangat profesional dan membantu saya dalam meningkatkan kepercayaan klien!"
+---
+Nama: Handoko Wijaya
+Profesi: Dosen
+Testimoni: "Website responsif dan sangat optimal di berbagai perangkat. Terima kasih banyak!"
+---
+Nama: Silvia Anjani
+Profesi: Makeup Artist
+Testimoni: "Website yang dibuat sangat ringan dan SEO-friendly. Traffic blog saya meningkat drastis!"
+---
+Nama: Denny Kurniawan
+Profesi: CEO Perusahaan Teknologi
+Testimoni: "Landing page game yang dibuat sangat keren dan menarik perhatian banyak orang!"
+---
+Nama: Sari Purnamasari
+Profesi: Akuntan
+Testimoni: "Website company profile yang dibuat meningkatkan kredibilitas bisnis saya!"
+---
+Nama: Silvia Anjani
+Profesi: Makeup Artist
+Testimoni: "Web yang dibuat sangat profesional dan membantu saya dalam meningkatkan kepercayaan klien!"
+---
+Nama: Rendy Saputra
+Profesi: Manajer IT
+Testimoni: "Sangat menghargai detail dalam desain yang dibuat. UX-nya sangat nyaman!"
+---
+Nama: Novi Susanti
+Profesi: Dokter
+Testimoni: "Website portofolio saya kini lebih profesional dan menarik klien baru!"
+---
+Nama: Kevin Wijaya
+Profesi: Pemilik Startup
+Testimoni: "Sistem rekrutmen berbasis web yang dibuat sangat membantu dalam proses seleksi karyawan."
+---
+Nama: Yulia Fitri
+Profesi: Data Analyst
+Testimoni: "Sistem rekrutmen berbasis web yang dibuat sangat membantu dalam proses seleksi karyawan."
+---
+Nama: Rendy Saputra
+Profesi: Manajer IT
+Testimoni: "Membantu saya dalam membangun portofolio untuk melamar beasiswa. Sangat direkomendasikan!"
+---
+Nama: Surya Pratama
+Profesi: Video Editor
+Testimoni: "Tampilan website sangat modern dan sesuai dengan branding saya. Rekomendasi banget!"
+---
+Nama: Dewi Kartika
+Profesi: Fotografer
+Testimoni: "Tampilan yang elegan dan profesional, sangat sesuai dengan branding saya!"
+---
+Nama: Dimas Prasetyo
+Profesi: CEO Startup
+Testimoni: "Membantu saya dalam membangun portofolio untuk melamar beasiswa. Sangat direkomendasikan!"
+---
+Nama: Linda Febriani
+Profesi: Desainer Grafis
+Testimoni: "Website musik yang dibuat sangat interaktif dan memudahkan fans mengakses karya saya."
+---
+Nama: Kevin Wijaya
+Profesi: Pemilik Startup
+Testimoni: "Sistem rekrutmen berbasis web yang dibuat sangat membantu dalam proses seleksi karyawan."
+---
+Nama: Rina Amelia
+Profesi: Freelancer
+Testimoni: "Desain yang diberikan sangat sesuai dengan personal branding saya. Hasilnya luar biasa!"
+---
+Nama: Silvia Anjani
+Profesi: Makeup Artist
+Testimoni: "Blog saya kini lebih menarik dan interaktif, banyak pembaca baru yang datang!"
+---
+Nama: Siti Nurlaila
+Profesi: Digital Marketer
+Testimoni: "Tampilan yang bersih dan estetik membuat portofolio saya semakin menarik!"
+---
+Nama: Novi Susanti
+Profesi: Dokter
+Testimoni: "Web yang dibuat sangat profesional dan membantu saya dalam meningkatkan kepercayaan klien!"
+---
+Nama: Arif Wicaksono
+Profesi: Konsultan Bisnis
+Testimoni: "Desain e-commerce yang dibuat sangat profesional dan membantu bisnis saya berkembang!"
+---
+Nama: Dimas Prasetyo
+Profesi: CEO Startup
+Testimoni: "Landing page game yang dibuat sangat keren dan menarik perhatian banyak orang!"
+---
+Nama: Kevin Wijaya
+Profesi: Pemilik Startup
+Testimoni: "E-commerce yang dibuat sangat user-friendly dan menarik pelanggan lebih banyak!"
+---
+Nama: Budi Santoso
+Profesi: Pengusaha
+Testimoni: "Dashboard analisis yang dibuat sangat membantu dalam menyajikan data dengan lebih jelas!"
+---
+Nama: Bayu Setiawan
+Profesi: UI/UX Designer
+Testimoni: "Layanan profesional dan berkualitas tinggi. Tim sangat responsif dan solutif!"
+---
+Nama: Citra Anggraini
+Profesi: Pemilik Toko Online
+Testimoni: "Website responsif dan sangat optimal di berbagai perangkat. Terima kasih banyak!"
+---
+Nama: Surya Pratama
+Profesi: Video Editor
+Testimoni: "Sistem rekrutmen berbasis web yang dibuat sangat membantu dalam proses seleksi karyawan."
+---
+Nama: Ridwan Pratama
+Profesi: Event Organizer
+Testimoni: "Sistem yang dikembangkan sangat stabil dan performanya luar biasa!"
+---
+Nama: Aditya Ramadhan
+Profesi: Developer
+Testimoni: "Website yang dibuat sangat rapi dan sesuai dengan kebutuhan bisnis saya."
+---
+Nama: Wahyu Adi
+Profesi: Teknisi IT
+Testimoni: "Pelayanan sangat cepat dan hasil yang memuaskan. Pengerjaan sesuai deadline!"
+---
+Nama: Denny Kurniawan
+Profesi: CEO Perusahaan Teknologi
+Testimoni: "Website musik yang dibuat sangat interaktif dan memudahkan fans mengakses karya saya."
+---
+Nama: Novi Susanti
+Profesi: Dokter
+Testimoni: "Pelayanan sangat cepat dan hasil yang memuaskan. Pengerjaan sesuai deadline!"
+---
+Nama: Rina Amelia
+Profesi: Freelancer
+Testimoni: "Website galeri yang dibuat sangat estetik dan mudah digunakan. Klien saya sangat menyukainya!"
+---
+Nama: Rossa Amelia
+Profesi: Influencer
+Testimoni: "Pelayanan sangat cepat dan hasil yang memuaskan. Pengerjaan sesuai deadline!"
+---
+Nama: Angga Saputra
+Profesi: Game Developer
+Testimoni: "Website galeri yang dibuat sangat estetik dan mudah digunakan. Klien saya sangat menyukainya!"
+---
+Nama: Surya Pratama
+Profesi: Video Editor
+Testimoni: "Web yang dibuat sangat profesional dan membantu saya dalam meningkatkan kepercayaan klien!"
+---
+Nama: Novi Susanti
+Profesi: Dokter
+Testimoni: "Pelayanan sangat cepat dan hasil yang memuaskan. Pengerjaan sesuai deadline!"
+---
+Nama: Rendy Saputra
+Profesi: Manajer IT
+Testimoni: "Website responsif dan sangat optimal di berbagai perangkat. Terima kasih banyak!"
+---
+Nama: Andi Maulana
+Profesi: HR Manager
+Testimoni: "Website yang dibuat sangat rapi dan sesuai dengan kebutuhan bisnis saya."
+---
+Nama: Dimas Prasetyo
+Profesi: CEO Startup
+Testimoni: "Tampilan yang elegan dan profesional, sangat sesuai dengan branding saya!"
+---
+Nama: Dewi Kartika
+Profesi: Fotografer
+Testimoni: "Desain e-commerce yang dibuat sangat profesional dan membantu bisnis saya berkembang!"
+---
+Nama: Budi Santoso
+Profesi: Pengusaha
+Testimoni: "Tampilan portfolio yang interaktif membuat klien saya lebih mudah melihat karya-karya saya!"
+---
+Nama: Farhan Maulana
+Profesi: Pelajar
+Testimoni: "Portofolio saya jadi lebih menarik berkat desain yang profesional. Komunikasi juga sangat lancar!"
+---
+Nama: Reza Permana
+Profesi: Musisi
+Testimoni: "Sangat puas dengan hasil desain UI/UX yang diberikan. Website jadi lebih user-friendly dan menarik!"
+---
+Nama: Kevin Wijaya
+Profesi: Pemilik Startup
+Testimoni: "Kode yang dibuat bersih dan rapi. Sangat mudah untuk dikembangkan lebih lanjut!"
+---
+Nama: Kevin Wijaya
+Profesi: Pemilik Startup
+Testimoni: "Desain e-commerce yang dibuat sangat profesional dan membantu bisnis saya berkembang!"
+---
+Nama: Angga Saputra
+Profesi: Game Developer
+Testimoni: "Layanan profesional dan berkualitas tinggi. Tim sangat responsif dan solutif!"
+---
+Nama: Rossa Amelia
+Profesi: Influencer
+Testimoni: "Website musik yang dibuat sangat interaktif dan memudahkan fans mengakses karya saya."
+---
+Nama: Dimas Prasetyo
+Profesi: CEO Startup
+Testimoni: "Desain yang diberikan sangat sesuai dengan personal branding saya. Hasilnya luar biasa!"
+---
+Nama: Reza Permana
+Profesi: Musisi
+Testimoni: "Pelayanan sangat cepat dan hasil yang memuaskan. Pengerjaan sesuai deadline!"
+---
+Nama: Yulia Fitri
+Profesi: Data Analyst
+Testimoni: "Website yang dibuat sangat ringan dan SEO-friendly. Traffic blog saya meningkat drastis!"
+---
+Nama: Arif Wicaksono
+Profesi: Konsultan Bisnis
+Testimoni: "Kode yang dibuat bersih dan rapi. Sangat mudah untuk dikembangkan lebih lanjut!"
+---
+Nama: Linda Febriani
+Profesi: Desainer Grafis
+Testimoni: "Website galeri yang dibuat sangat esteti
