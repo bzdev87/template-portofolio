@@ -4,8 +4,71 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portofolio Akbar</title>
-    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        /* CSS Tampilan */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #111;
+            color: white;
+            text-align: center;
+        }
+        
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+            background-color: #222;
+            font-weight: bold;
+        }
+
+        .hero {
+            padding: 50px;
+            background: linear-gradient(to right, #6a11cb, #2575fc);
+        }
+
+        .hero h1 {
+            font-size: 36px;
+            margin: 0;
+        }
+
+        .hero p a {
+            color: yellow;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .about, .profile, .testimoni-container, .contact {
+            padding: 30px;
+            background-color: #333;
+            margin: 20px;
+            border-radius: 10px;
+        }
+
+        .testimoni-box {
+            background-color: #444;
+            padding: 15px;
+            margin: 10px;
+            border-radius: 5px;
+        }
+
+        .contact ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .contact ul li {
+            margin: 10px 0;
+        }
+
+        footer {
+            padding: 10px;
+            background-color: #222;
+        }
+    </style>
 </head>
 <body>
 
@@ -23,21 +86,24 @@
     <section class="about">
         <h2>Tentang Saya</h2>
         <p>Saya seorang Web Developer & UI/UX Designer dengan pengalaman lebih dari 5 tahun.</p>
+        <p>📌 <a href="https://instagram.com/dash1.id" style="color: yellow;">Instagram</a> | 
+        <a href="https://facebook.com/barzxsta" style="color: yellow;">Facebook</a> | 
+        <a href="mailto:jawirjago0@gmail.com" style="color: yellow;">Email</a></p>
+    </section>
+
+    <section class="profile">
+        <h2>Profil Saya</h2>
+        <img src="https://via.placeholder.com/150" alt="Foto Profil Akbar" style="border-radius: 50%;">
+        <p>Nama: Akbar</p>
+        <p>Keahlian: Web Development, UI/UX Design</p>
+        <p>Proyek: Pembuatan Website, Chatbot AI, Musik AI</p>
     </section>
 
     <section class="testimoni-container">
-        <div class="testimoni-box">
-            <h3>Testimoni 1</h3>
-            <p id="testimoni1">Memuat testimoni...</p>
-        </div>
-        <div class="testimoni-box">
-            <h3>Testimoni 2</h3>
-            <p id="testimoni2">Memuat testimoni...</p>
-        </div>
-        <div class="testimoni-box">
-            <h3>Testimoni 3</h3>
-            <p id="testimoni3">Memuat testimoni...</p>
-        </div>
+        <h2>Testimoni</h2>
+        <div class="testimoni-box" id="testimoni1">Memuat testimoni...</div>
+        <div class="testimoni-box" id="testimoni2">Memuat testimoni...</div>
+        <div class="testimoni-box" id="testimoni3">Memuat testimoni...</div>
     </section>
 
     <section class="contact">
@@ -54,6 +120,44 @@
         &copy; 2025 Akbar | Portofolio Web Developer
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+        // Update Waktu & Baterai
+        function updateTime() {
+            const now = new Date();
+            const days = ['Minggu', 'Senin', 'Selasa', 'Rabu', 'Kamis', 'Jumat', 'Sabtu'];
+            const months = ['Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember'];
+            
+            const timeString = `Waktu: ${days[now.getDay()]}, ${now.getDate()} ${months[now.getMonth()]} ${now.getFullYear()} pukul ${now.getHours()}:${now.getMinutes()}:${now.getSeconds()}`;
+            document.getElementById('time-info').innerText = timeString;
+        }
+
+        function updateBattery() {
+            navigator.getBattery().then(battery => {
+                let level = Math.round(battery.level * 100);
+                let charging = battery.charging ? "Mengisi" : "Tidak Mengisi";
+                document.getElementById('battery-info').innerText = `Baterai: ${level}% ${charging}`;
+            });
+        }
+
+        setInterval(updateTime, 1000);
+        updateBattery();
+
+        // Load Testimoni Random
+        async function loadTestimoni() {
+            const files = ["testimoni.txt", "testimoni2.txt", "testimoni3.txt"];
+            const elements = ["testimoni1", "testimoni2", "testimoni3"];
+
+            for (let i = 0; i < files.length; i++) {
+                let response = await fetch(files[i]);
+                let text = await response.text();
+                let lines = text.split("\n").filter(line => line.trim() !== "");
+                let randomLine = lines[Math.floor(Math.random() * lines.length)];
+
+                document.getElementById(elements[i]).innerHTML = `⭐ "${randomLine}"`;
+            }
+        }
+
+        loadTestimoni();
+    </script>
 </body>
-            </html>
+    </html>
