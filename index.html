@@ -6,27 +6,41 @@
     <title>Portofolio Akbar</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
-        body { background-color: #f5f5f5; color: #333; text-align: center; }
-        
-        /* Status Bar */
-        .status-bar {
-            background: #222;
+        /* Reset Style */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #1a1a2e;
             color: white;
-            padding: 5px;
-            font-size: 14px;
+            text-align: center;
         }
 
         /* Navbar */
         .navbar {
-            background: #333;
+            background: #0f3460;
             padding: 10px 20px;
             display: flex;
             justify-content: space-between;
             align-items: center;
             color: white;
         }
-        .navbar h2 { font-size: 20px; }
+
+        .navbar h2 {
+            font-size: 20px;
+        }
+
+        /* Status Bar */
+        .status-bar {
+            background: #16213e;
+            color: white;
+            padding: 5px;
+            font-size: 14px;
+        }
 
         /* Hero Section */
         .hero {
@@ -34,8 +48,9 @@
             background: linear-gradient(135deg, #ff512f, #dd2476);
             border-radius: 10px;
             margin: 20px;
-            color: white;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
         }
+
         .hero img {
             width: 120px;
             height: 120px;
@@ -43,8 +58,20 @@
             object-fit: cover;
             border: 3px solid #fff;
         }
-        .hero h1 { font-size: 28px; margin: 10px 0; }
-        .hero p { font-size: 16px; opacity: 0.9; }
+
+        .hero h1 {
+            font-size: 28px;
+            margin: 10px 0;
+            color: white;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero p {
+            font-size: 16px;
+            opacity: 0.9;
+            color: white;
+        }
+
         .btn {
             display: inline-block;
             padding: 10px 20px;
@@ -54,40 +81,60 @@
             border-radius: 5px;
             margin-top: 15px;
             font-weight: bold;
+            transition: 0.3s;
         }
 
-        /* Section */
-        .section {
+        .btn:hover {
+            background: gold;
+        }
+
+        /* Testimoni Section */
+        .testimoni {
             padding: 20px;
             background: white;
             margin: 20px;
             border-radius: 10px;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            text-align: left;
+            color: black;
+            font-size: 18px;
+            position: relative;
         }
-        .portfolio-item {
-            margin: 10px 0;
-            padding: 15px;
-            background: #f1f1f1;
-            border-radius: 5px;
+
+        .testimoni p {
+            font-style: italic;
+            opacity: 0.9;
         }
-        .portfolio-item img { width: 100%; max-width: 300px; border-radius: 5px; }
-        .testimoni { margin: 10px 0; padding: 15px; background: #f1f1f1; border-radius: 5px; }
-        .testimoni strong { color: #ff512f; }
+
+        /* Animasi Transisi Testimoni */
+        .fade {
+            animation: fadeEffect 1s ease-in-out;
+        }
+
+        @keyframes fadeEffect {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
 
         /* Footer */
         .footer {
             padding: 15px;
-            background: #333;
+            background: #0f3460;
             color: white;
             font-size: 14px;
         }
 
         /* Responsif */
         @media (max-width: 600px) {
-            .hero { padding: 30px; }
-            .hero h1 { font-size: 24px; }
-            .hero img { width: 100px; height: 100px; }
+            .hero {
+                padding: 30px;
+            }
+            .hero h1 {
+                font-size: 24px;
+            }
+            .hero img {
+                width: 100px;
+                height: 100px;
+            }
         }
     </style>
 </head>
@@ -106,37 +153,16 @@
 
     <!-- Hero Section -->
     <div class="hero">
-        <img src="20250114_175407.png" alt="Foto Profil">
+        <img src="profil.png" alt="Foto Profil">
         <h1>Akbar</h1>
         <p>Web Developer | UI/UX Designer | Freelancer</p>
         <a href="https://wa.me/6287825946251" class="btn">Hubungi Saya</a>
     </div>
 
-    <!-- Tentang Saya -->
-    <div class="section">
-        <h2>Tentang Saya</h2>
-        <p>Saya seorang Web Developer & UI/UX Designer dengan pengalaman lebih dari 5 tahun.</p>
-    </div>
-
-    <!-- Portofolio -->
-    <div class="section">
-        <h2>Portofolio</h2>
-        <div class="portfolio-item">
-            <img src="https://via.placeholder.com/300" alt="Proyek 1">
-            <h3>Website Bisnis</h3>
-            <p>Website company profile yang elegan dan profesional.</p>
-        </div>
-        <div class="portfolio-item">
-            <img src="https://via.placeholder.com/300" alt="Proyek 2">
-            <h3>Aplikasi Mobile</h3>
-            <p>Aplikasi mobile yang interaktif dan responsif.</p>
-        </div>
-    </div>
-
     <!-- Testimoni -->
-    <div class="section">
+    <div class="testimoni" id="testimoni-box">
         <h2>Testimoni Klien</h2>
-        <div id="testimoni-container">Memuat testimoni...</div>
+        <p id="testimoni-text">Mengambil data testimoni...</p>
     </div>
 
     <!-- Footer -->
@@ -145,39 +171,54 @@
     </div>
 
     <script>
-        // Ambil Testimoni dari testimoni.txt
-        fetch('testimoni.txt')
-            .then(response => response.text())
-            .then(data => {
-                const testimoniContainer = document.getElementById("testimoni-container");
-                const testimonis = data.split("---").map(t => t.trim()).filter(t => t);
-                testimoniContainer.innerHTML = testimonis.map(t => {
-                    const lines = t.split("\n");
-                    const nama = lines[0].replace("Nama: ", "");
-                    const profesi = lines[1].replace("Profesi: ", "");
-                    const testimoni = lines[2].replace("Testimoni: ", "");
-                    return `<div class="testimoni"><strong>${nama}</strong> (${profesi})<p>"${testimoni}"</p></div>`;
-                }).join("");
-            })
-            .catch(error => console.error("Gagal memuat testimoni:", error));
-
-        // Update Waktu & Baterai
+        // Fungsi untuk menampilkan waktu real-time
         function updateTime() {
             const now = new Date();
-            const options = { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric', hour: '2-digit', minute: '2-digit', second: '2-digit' };
-            document.getElementById("time-status").innerText = `Waktu: ${now.toLocaleDateString('id-ID', options)}`;
-        }
-        setInterval(updateTime, 1000);
-        updateTime();
+            const days = ["Minggu", "Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu"];
+            const months = ["Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "Oktober", "November", "Desember"];
 
-        navigator.getBattery().then(battery => {
-            function updateBattery() {
-                document.getElementById("battery-status").innerText = `Baterai: ${Math.round(battery.level * 100)}% ${battery.charging ? "⚡" : ""}`;
+            let day = days[now.getDay()];
+            let date = now.getDate();
+            let month = months[now.getMonth()];
+            let year = now.getFullYear();
+            let hours = now.getHours().toString().padStart(2, '0');
+            let minutes = now.getMinutes().toString().padStart(2, '0');
+            let seconds = now.getSeconds().toString().padStart(2, '0');
+
+            document.getElementById("time-status").innerText = `Waktu: ${day}, ${date} ${month} ${year} - ${hours}:${minutes}:${seconds}`;
+        }
+
+        // Fungsi untuk mengambil status baterai
+        function updateBattery() {
+            if ('getBattery' in navigator) {
+                navigator.getBattery().then(battery => {
+                    function updateBatteryStatus() {
+                        let chargingStatus = battery.charging ? "Sedang diisi" : "Tidak diisi";
+                        let batteryLevel = Math.round(battery.level * 100);
+                        document.getElementById("battery-status").innerText = `Baterai: ${batteryLevel}% (${chargingStatus})`;
+                    }
+                    updateBatteryStatus();
+                    battery.addEventListener('chargingchange', updateBatteryStatus);
+                    battery.addEventListener('levelchange', updateBatteryStatus);
+                });
+            } else {
+                document.getElementById("battery-status").innerText = "Baterai: Tidak didukung";
             }
-            battery.addEventListener("chargingchange", updateBattery);
-            battery.addEventListener("levelchange", updateBattery);
-            updateBattery();
-        });
+        }
+
+        // Fungsi Testimoni Bergantian
+        let testimoniList = ["Pelayanan sangat memuaskan!", "Situsnya keren dan responsif!", "Akbar sangat profesional!", "Rekomendasi terbaik!"];
+        let index = 0;
+        function updateTestimoni() {
+            document.getElementById("testimoni-text").classList.add("fade");
+            document.getElementById("testimoni-text").innerText = testimoniList[index];
+            index = (index + 1) % testimoniList.length;
+            setTimeout(() => document.getElementById("testimoni-text").classList.remove("fade"), 900);
+        }
+
+        setInterval(updateTime, 1000);
+        updateBattery();
+        setInterval(updateTestimoni, 4000);
     </script>
 
 </body>
