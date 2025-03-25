@@ -8,31 +8,144 @@
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
         body { background-color: #f5f5f5; color: #333; text-align: center; }
-        .navbar { width: 100%; background: #ff512f; color: white; padding: 15px; position: fixed; top: 0; left: 0; z-index: 1000; }
-        .navbar .info { font-size: 14px; }
-        .testimoni-section { margin-top: 70px; padding: 20px; background: white; margin: 20px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); }
-        .testimoni { margin: 10px 0; padding: 15px; background: #f1f1f1; border-radius: 5px; text-align: left; }
-        .testimoni p { margin: 5px 0; }
+        
+        /* Status Bar */
+        .status-bar {
+            background: #222;
+            color: white;
+            padding: 5px;
+            font-size: 14px;
+        }
+
+        /* Navbar */
+        .navbar {
+            background: #333;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: white;
+        }
+        .navbar h2 { font-size: 20px; }
+
+        /* Hero Section */
+        .hero {
+            padding: 40px 20px;
+            background: linear-gradient(135deg, #ff512f, #dd2476);
+            border-radius: 10px;
+            margin: 20px;
+            color: white;
+        }
+        .hero img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #fff;
+        }
+        .hero h1 { font-size: 28px; margin: 10px 0; }
+        .hero p { font-size: 16px; opacity: 0.9; }
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background: yellow;
+            color: black;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+
+        /* Section */
+        .section {
+            padding: 20px;
+            background: white;
+            margin: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            text-align: left;
+        }
+        .portfolio-item {
+            margin: 10px 0;
+            padding: 15px;
+            background: #f1f1f1;
+            border-radius: 5px;
+        }
+        .portfolio-item img { width: 100%; max-width: 300px; border-radius: 5px; }
+        .testimoni { margin: 10px 0; padding: 15px; background: #f1f1f1; border-radius: 5px; }
         .testimoni strong { color: #ff512f; }
+
+        /* Footer */
+        .footer {
+            padding: 15px;
+            background: #333;
+            color: white;
+            font-size: 14px;
+        }
+
+        /* Responsif */
+        @media (max-width: 600px) {
+            .hero { padding: 30px; }
+            .hero h1 { font-size: 24px; }
+            .hero img { width: 100px; height: 100px; }
+        }
     </style>
 </head>
 <body>
 
+    <!-- Status Bar -->
+    <div class="status-bar">
+        <span id="battery-status">Baterai: Mengambil data...</span> | 
+        <span id="time-status">Waktu: Loading...</span>
+    </div>
+
     <!-- Navbar -->
     <div class="navbar">
-        <div class="info">
-            ⏳ <span id="time"></span> | 📅 <span id="date"></span> | 🔋 <span id="battery-status"></span>
+        <h2>⚡ Portofolio</h2>
+    </div>
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <img src="profil.png" alt="Foto Profil">
+        <h1>Akbar</h1>
+        <p>Web Developer | UI/UX Designer | Freelancer</p>
+        <a href="https://wa.me/6287825946251" class="btn">Hubungi Saya</a>
+    </div>
+
+    <!-- Tentang Saya -->
+    <div class="section">
+        <h2>Tentang Saya</h2>
+        <p>Saya seorang Web Developer & UI/UX Designer dengan pengalaman lebih dari 5 tahun.</p>
+    </div>
+
+    <!-- Portofolio -->
+    <div class="section">
+        <h2>Portofolio</h2>
+        <div class="portfolio-item">
+            <img src="https://via.placeholder.com/300" alt="Proyek 1">
+            <h3>Website Bisnis</h3>
+            <p>Website company profile yang elegan dan profesional.</p>
+        </div>
+        <div class="portfolio-item">
+            <img src="https://via.placeholder.com/300" alt="Proyek 2">
+            <h3>Aplikasi Mobile</h3>
+            <p>Aplikasi mobile yang interaktif dan responsif.</p>
         </div>
     </div>
 
-    <!-- Testimoni Section -->
-    <div class="testimoni-section">
+    <!-- Testimoni -->
+    <div class="section">
         <h2>Testimoni Klien</h2>
         <div id="testimoni-container">Memuat testimoni...</div>
     </div>
 
+    <!-- Footer -->
+    <div class="footer">
+        © 2025 Akbar | <a href="mailto:jawirjago0@gmail.com" style="color: yellow; text-decoration: none;">Email Saya</a>
+    </div>
+
     <script>
-        // **1. Ambil Testimoni dari testimoni.txt**
+        // Ambil Testimoni dari testimoni.txt
         fetch('testimoni.txt')
             .then(response => response.text())
             .then(data => {
@@ -48,22 +161,18 @@
             })
             .catch(error => console.error("Gagal memuat testimoni:", error));
 
-        // **2. Update Waktu & Baterai**
+        // Update Waktu & Baterai
         function updateTime() {
             const now = new Date();
-            const days = ["Minggu", "Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu"];
-            const day = days[now.getDay()];
-            const date = `${day}, ${now.getDate()}-${now.getMonth() + 1}-${now.getFullYear()}`;
-            const time = `${now.getHours()}:${now.getMinutes()}:${now.getSeconds()}`;
-            document.getElementById("date").innerText = date;
-            document.getElementById("time").innerText = time;
+            const options = { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric', hour: '2-digit', minute: '2-digit', second: '2-digit' };
+            document.getElementById("time-status").innerText = `Waktu: ${now.toLocaleDateString('id-ID', options)}`;
         }
         setInterval(updateTime, 1000);
         updateTime();
 
         navigator.getBattery().then(battery => {
             function updateBattery() {
-                document.getElementById("battery-status").innerText = `${(battery.level * 100).toFixed(0)}% ${battery.charging ? "⚡" : ""}`;
+                document.getElementById("battery-status").innerText = `Baterai: ${Math.round(battery.level * 100)}% ${battery.charging ? "⚡" : ""}`;
             }
             battery.addEventListener("chargingchange", updateBattery);
             battery.addEventListener("levelchange", updateBattery);
