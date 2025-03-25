@@ -30,17 +30,6 @@
             background: linear-gradient(to right, #6a11cb, #2575fc);
         }
 
-        .hero h1 {
-            font-size: 36px;
-            margin: 0;
-        }
-
-        .hero p a {
-            color: yellow;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
         .about, .profile, .testimoni-container, .contact {
             padding: 30px;
             background-color: #333;
@@ -58,10 +47,6 @@
         .contact ul {
             list-style: none;
             padding: 0;
-        }
-
-        .contact ul li {
-            margin: 10px 0;
         }
 
         footer {
@@ -83,37 +68,25 @@
         <p>Membuat website <a href="https://wa.me/6287825946251">Hubungi Saya</a></p>
     </section>
 
-    <section class="about">
-        <h2>Tentang Saya</h2>
-        <p>Saya seorang Web Developer & UI/UX Designer dengan pengalaman lebih dari 5 tahun.</p>
-        <p>📌 <a href="https://instagram.com/dash1.id" style="color: yellow;">Instagram</a> | 
-        <a href="https://facebook.com/barzxsta" style="color: yellow;">Facebook</a> | 
-        <a href="mailto:jawirjago0@gmail.com" style="color: yellow;">Email</a></p>
-    </section>
-
     <section class="profile">
         <h2>Profil Saya</h2>
-        <img src="https://via.placeholder.com/150" alt="Foto Profil Akbar" style="border-radius: 50%;">
-        <p>Nama: Akbar</p>
-        <p>Keahlian: Web Development, UI/UX Design</p>
-        <p>Proyek: Pembuatan Website, Chatbot AI, Musik AI</p>
+        <p>Halo, saya Akbar, seorang Web Developer dan UI/UX Designer dengan pengalaman lebih dari 5 tahun. Saya membantu bisnis dan individu dalam menciptakan website yang profesional dan menarik.</p>
+    </section>
+
+    <section class="about">
+        <h2>Tentang Saya</h2>
+        <p>Ikuti saya di media sosial:</p>
+        <ul>
+            <li><a href="https://wa.me/6287825946251"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
+            <li><a href="https://instagram.com/dash1.id"><i class="fab fa-instagram"></i> Instagram</a></li>
+            <li><a href="https://facebook.com/barzxsta"><i class="fab fa-facebook"></i> Facebook</a></li>
+            <li><a href="mailto:jawirjago0@gmail.com"><i class="fas fa-envelope"></i> Email</a></li>
+        </ul>
     </section>
 
     <section class="testimoni-container">
         <h2>Testimoni</h2>
-        <div class="testimoni-box" id="testimoni1">Memuat testimoni...</div>
-        <div class="testimoni-box" id="testimoni2">Memuat testimoni...</div>
-        <div class="testimoni-box" id="testimoni3">Memuat testimoni...</div>
-    </section>
-
-    <section class="contact">
-        <h2>Kontak Saya</h2>
-        <ul>
-            <li><i class="fab fa-whatsapp"></i> <a href="https://wa.me/6287825946251">WhatsApp</a></li>
-            <li><i class="fab fa-instagram"></i> <a href="https://instagram.com/dash1.id">@dash1.id</a></li>
-            <li><i class="fab fa-facebook"></i> <a href="https://facebook.com/barzxsta">Barzx Sta</a></li>
-            <li><i class="fas fa-envelope"></i> <a href="mailto:jawirjago0@gmail.com">jawirjago0@gmail.com</a></li>
-        </ul>
+        <div class="testimoni-box" id="testimoni">Memuat testimoni...</div>
     </section>
 
     <footer>
@@ -142,22 +115,22 @@
         setInterval(updateTime, 1000);
         updateBattery();
 
-        // Load Testimoni Random
+        // Load Testimoni Random Setiap 1 Detik
         async function loadTestimoni() {
             const files = ["testimoni.txt", "testimoni2.txt", "testimoni3.txt"];
-            const elements = ["testimoni1", "testimoni2", "testimoni3"];
 
-            for (let i = 0; i < files.length; i++) {
-                let response = await fetch(files[i]);
+            setInterval(async () => {
+                let randomFile = files[Math.floor(Math.random() * files.length)];
+                let response = await fetch(randomFile);
                 let text = await response.text();
                 let lines = text.split("\n").filter(line => line.trim() !== "");
                 let randomLine = lines[Math.floor(Math.random() * lines.length)];
 
-                document.getElementById(elements[i]).innerHTML = `⭐ "${randomLine}"`;
-            }
+                document.getElementById("testimoni").innerHTML = `⭐ "${randomLine}"`;
+            }, 1000); // Update setiap 1 detik
         }
 
         loadTestimoni();
     </script>
 </body>
-    </html>
+</html>
