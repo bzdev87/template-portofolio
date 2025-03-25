@@ -6,12 +6,13 @@
     <title>Portofolio Akbar</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <style>
-        /* Reset Style */
+        /* Reset */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
             font-family: Arial, sans-serif;
+            transition: 0.3s;
         }
         
         body {
@@ -37,13 +38,21 @@
             font-size: 14px;
         }
 
+        /* Mode Toggle */
+        .toggle-btn {
+            cursor: pointer;
+            background: yellow;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
         /* Hero Section */
         .hero {
             padding: 20px;
             background: linear-gradient(135deg, #ff512f, #dd2476);
             border-radius: 10px;
             margin: 20px;
-            position: relative;
         }
 
         .hero img {
@@ -82,11 +91,6 @@
             margin-top: 20px;
             background: #1a1a1a;
             border-radius: 10px;
-        }
-
-        .section h2 {
-            font-size: 20px;
-            margin-bottom: 10px;
         }
 
         /* Layanan */
@@ -152,12 +156,13 @@
             <span id="time"></span> | 
             <span id="date"></span>
         </div>
+        <div class="toggle-btn" onclick="toggleDarkMode()">🌙 Mode</div>
     </div>
 
     <!-- Hero Section -->
     <div class="hero">
         <img src="20250114_175407.png" alt="Foto Profil" width="150" height="150">
-        <h1>Akbar</h1>
+        <h1 id="typing-text"></h1>
         <p>Web Developer | UI/UX Designer | Freelancer</p>
         <a href="https://wa.me/6287825946251" class="btn">Hubungi Saya</a>
     </div>
@@ -184,9 +189,7 @@
     <!-- Testimoni -->
     <div class="testimonials">
         <h2>Testimoni</h2>
-        <div class="testimonial-slide active">⭐ "Pelayanan sangat cepat dan hasilnya luar biasa!" - Budi</div>
-        <div class="testimonial-slide">⭐ "Website yang dibuat sangat profesional dan responsif." - Rina</div>
-        <div class="testimonial-slide">⭐ "Sangat puas dengan desain UI/UX yang modern." - Dika</div>
+        <div id="testimoni-container"></div>
     </div>
 
     <!-- Footer -->
@@ -195,26 +198,15 @@
     </div>
 
     <script>
-        // Update waktu & tanggal secara real-time
         function updateTime() {
             let now = new Date();
             let hours = now.getHours().toString().padStart(2, '0');
             let minutes = now.getMinutes().toString().padStart(2, '0');
-            let seconds = now.getSeconds().toString().padStart(2, '0');
-            document.getElementById("time").innerText = `${hours}:${minutes}:${seconds}`;
+            document.getElementById("time").innerText = `${hours}:${minutes}`;
         }
         setInterval(updateTime, 1000);
         updateTime();
 
-        // Update tanggal
-        function updateDate() {
-            let now = new Date();
-            let options = { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' };
-            document.getElementById("date").innerText = now.toLocaleDateString("id-ID", options);
-        }
-        updateDate();
-
-        // Update baterai
         function updateBattery() {
             navigator.getBattery().then(function(battery) {
                 let level = Math.round(battery.level * 100);
@@ -222,18 +214,37 @@
             });
         }
         updateBattery();
-        setInterval(updateBattery, 60000);
 
-        // Testimoni Slider
-        let index = 0;
-        function showTestimonial() {
-            let slides = document.querySelectorAll('.testimonial-slide');
-            slides.forEach(slide => slide.classList.remove('active'));
-            slides[index].classList.add('active');
-            index = (index + 1) % slides.length;
+        function toggleDarkMode() {
+            document.body.classList.toggle("dark-mode");
         }
-        setInterval(showTestimonial, 3000);
+
+        function loadTestimoni() {
+            fetch("testimoni.txt")
+                .then(response => response.text())
+                .then(data => {
+                    let testimoniArray = data.split("\n");
+                    let container = document.getElementById("testimoni-container");
+                    testimoniArray.forEach(text => {
+                        let div = document.createElement("div");
+                        div.classList.add("testimonial-slide");
+                        div.textContent = `⭐ ${text}`;
+                        container.appendChild(div);
+                    });
+                });
+        }
+        loadTestimoni();
+
+        let text = "Akbar";
+        let index = 0;
+        function typeEffect() {
+            document.getElementById("typing-text").textContent = text.slice(0, index++);
+            if (index <= text.length) {
+                setTimeout(typeEffect, 150);
+            }
+        }
+        typeEffect();
     </script>
 
 </body>
-  </html>
+            </html>
