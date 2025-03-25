@@ -1,66 +1,51 @@
 body {
-    background-color: #1a1a2e;
-    color: white;
     font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
     text-align: center;
-    padding: 20px;
 }
 
 .navbar {
-    background: #333;
-    padding: 10px;
-    font-size: 16px;
-    font-weight: bold;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    font-size: 14px;
 }
 
 .hero {
-    padding: 40px 20px;
-    background: linear-gradient(135deg, #ff512f, #dd2476);
-    border-radius: 10px;
-    margin: 20px auto;
-    max-width: 600px;
-}
-
-.about, .contact {
-    margin-top: 30px;
-}
-
-.contact ul {
-    list-style: none;
-    padding: 0;
-}
-
-.contact ul li {
-    margin: 10px 0;
-}
-
-.contact a {
+    background: #2c3e50;
     color: white;
-    text-decoration: none;
+    padding: 50px 20px;
 }
 
-.testimoni-container {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 30px;
+.about, .testimoni-container, .contact {
+    background: white;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .testimoni-box {
-    background: white;
-    color: black;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    width: 30%;
-    font-size: 16px;
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin: 10px;
+    background: #f9f9f9;
+    border-radius: 5px;
 }
 
 footer {
-    padding: 15px;
     background: #333;
-    font-size: 14px;
+    color: white;
+    padding: 10px;
     margin-top: 20px;
 }
+
+a {
+    color: #3498db;
+    text-decoration: none;
+    }
