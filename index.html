@@ -15,7 +15,7 @@
             color: white;
             text-align: center;
         }
-        
+
         .navbar {
             display: flex;
             justify-content: space-between;
@@ -39,9 +39,30 @@
 
         .testimoni-box {
             background-color: #444;
-            padding: 15px;
+            padding: 20px;
             margin: 10px;
-            border-radius: 5px;
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .testimoni-name {
+            font-weight: bold;
+            font-size: 18px;
+            color: #FFD700;
+        }
+
+        .testimoni-profesi {
+            font-style: italic;
+            color: #ddd;
+        }
+
+        .testimoni-text {
+            margin-top: 10px;
+            font-size: 16px;
+            text-align: center;
+            color: #fff;
         }
 
         .contact ul {
@@ -86,7 +107,11 @@
 
     <section class="testimoni-container">
         <h2>Testimoni</h2>
-        <div class="testimoni-box" id="testimoni">Memuat testimoni...</div>
+        <div class="testimoni-box">
+            <span class="testimoni-name" id="testimoni-nama">Memuat...</span>
+            <span class="testimoni-profesi" id="testimoni-profesi">Memuat...</span>
+            <p class="testimoni-text" id="testimoni-text">Memuat testimoni...</p>
+        </div>
     </section>
 
     <footer>
@@ -124,9 +149,12 @@
                 let response = await fetch(randomFile);
                 let text = await response.text();
                 let lines = text.split("\n").filter(line => line.trim() !== "");
-                let randomLine = lines[Math.floor(Math.random() * lines.length)];
 
-                document.getElementById("testimoni").innerHTML = `⭐ "${randomLine}"`;
+                if (lines.length >= 3) {
+                    document.getElementById("testimoni-nama").innerText = lines[0]; // Nama
+                    document.getElementById("testimoni-profesi").innerText = lines[1]; // Profesi
+                    document.getElementById("testimoni-text").innerText = `"${lines[2]}"`; // Testimoni
+                }
             }, 1000); // Update setiap 1 detik
         }
 
