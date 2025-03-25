@@ -30,7 +30,6 @@
             padding: 60px;
             background: linear-gradient(to right, #6a11cb, #2575fc);
             color: white;
-            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
         }
 
         .container {
@@ -51,13 +50,12 @@
             border-radius: 10px;
             box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
             backdrop-filter: blur(10px);
-            transition: transform 0.3s ease, opacity 0.5s ease;
             opacity: 0;
+            transition: opacity 0.5s ease;
         }
 
         .testimoni-card.show {
             opacity: 1;
-            transform: scale(1.05);
         }
 
         .testimoni-name {
@@ -74,7 +72,6 @@
 
         .testimoni-text {
             font-size: 16px;
-            text-align: center;
             color: #fff;
         }
 
@@ -95,25 +92,25 @@
 
     <section class="hero">
         <h1>Akbar - Web Developer</h1>
-        <p>Membuat website <a href="https://wa.me/6287825946251" style="color: yellow; text-decoration: none;">Hubungi Saya</a></p>
+        <p>Membuat website <a href="https://wa.me/6287825946251" style="color: yellow;">Hubungi Saya</a></p>
     </section>
 
     <section class="container">
         <h2>Testimoni</h2>
         <div class="testimoni-container">
-            <div class="testimoni-card" id="testimoni1">
+            <div class="testimoni-card show" id="testimoni1">
                 <span class="testimoni-name" id="testimoni1-nama">Memuat...</span>
                 <span class="testimoni-profesi" id="testimoni1-profesi">Memuat...</span>
                 <p class="testimoni-text" id="testimoni1-text">Memuat testimoni...</p>
             </div>
 
-            <div class="testimoni-card" id="testimoni2">
+            <div class="testimoni-card show" id="testimoni2">
                 <span class="testimoni-name" id="testimoni2-nama">Memuat...</span>
                 <span class="testimoni-profesi" id="testimoni2-profesi">Memuat...</span>
                 <p class="testimoni-text" id="testimoni2-text">Memuat testimoni...</p>
             </div>
 
-            <div class="testimoni-card" id="testimoni3">
+            <div class="testimoni-card show" id="testimoni3">
                 <span class="testimoni-name" id="testimoni3-nama">Memuat...</span>
                 <span class="testimoni-profesi" id="testimoni3-profesi">Memuat...</span>
                 <p class="testimoni-text" id="testimoni3-text">Memuat testimoni...</p>
@@ -148,38 +145,42 @@
 
         async function loadTestimoni() {
             const files = ["testimoni.txt", "testimoni2.txt", "testimoni3.txt"];
-            let elements = [
-                { id: "testimoni1", name: "testimoni1-nama", profesi: "testimoni1-profesi", text: "testimoni1-text" },
-                { id: "testimoni2", name: "testimoni2-nama", profesi: "testimoni2-profesi", text: "testimoni2-text" },
-                { id: "testimoni3", name: "testimoni3-nama", profesi: "testimoni3-profesi", text: "testimoni3-text" }
-            ];
+            let testimoniData = [];
 
-            async function fetchTestimoni(index) {
-                let response = await fetch(files[index]);
+            for (let file of files) {
+                let response = await fetch(file);
                 let text = await response.text();
                 let lines = text.split("\n").filter(line => line.trim() !== "");
-
-                if (lines.length >= 3) {
-                    document.getElementById(elements[index].name).innerText = lines[0];
-                    document.getElementById(elements[index].profesi).innerText = lines[1];
-                    document.getElementById(elements[index].text).innerText = `"${lines[2]}"`;
+                
+                for (let i = 0; i < lines.length; i += 3) {
+                    if (lines[i + 2]) {
+                        testimoniData.push({
+                            nama: lines[i],
+                            profesi: lines[i + 1],
+                            text: lines[i + 2]
+                        });
+                    }
                 }
-
-                let card = document.getElementById(elements[index].id);
-                card.classList.add("show");
-
-                setTimeout(() => {
-                    card.classList.remove("show");
-                    setTimeout(() => fetchTestimoni(index), 2000);
-                }, 2000);
             }
 
-            for (let i = 0; i < 3; i++) {
-                fetchTestimoni(i);
+            function updateTestimoni() {
+                let shuffled = testimoniData.sort(() => Math.random() - 0.5);
+                let elements = ["testimoni1", "testimoni2", "testimoni3"];
+
+                elements.forEach((id, index) => {
+                    let testimoni = shuffled[index % shuffled.length];
+                    document.getElementById(id + "-nama").innerText = testimoni.nama;
+                    document.getElementById(id + "-profesi").innerText = testimoni.profesi;
+                    document.getElementById(id + "-text").innerText = `"${testimoni.text}"`;
+                });
+
+                setTimeout(updateTestimoni, 2000);
             }
+
+            updateTestimoni();
         }
 
         loadTestimoni();
     </script>
 </body>
-    </html>
+</html>
