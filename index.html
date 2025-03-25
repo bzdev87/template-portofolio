@@ -3,184 +3,199 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portofolio Akbar</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <title>Portofolio & Testimoni</title>
     <style>
-        /* UI/UX Modern */
-        body {
-            font-family: 'Poppins', sans-serif;
+        * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        body {
             background-color: #121212;
             color: white;
             text-align: center;
         }
-
         .navbar {
+            background: #1e1e1e;
+            padding: 10px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 15px 30px;
-            background: linear-gradient(to right, #ff416c, #ff4b2b);
-            box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
-            font-weight: bold;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
         }
-
-        .hero {
-            padding: 60px;
-            background: linear-gradient(to right, #6a11cb, #2575fc);
-            color: white;
+        .navbar span {
+            font-size: 14px;
         }
-
         .container {
-            padding: 40px;
+            padding: 80px 20px 50px;
         }
-
-        .testimoni-container {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            flex-wrap: wrap;
-        }
-
         .testimoni-card {
-            background: rgba(255, 255, 255, 0.1);
+            background: #1e1e1e;
             padding: 20px;
-            width: 300px;
+            margin: 10px auto;
+            width: 90%;
+            max-width: 400px;
             border-radius: 10px;
-            box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
-            backdrop-filter: blur(10px);
-            opacity: 0;
-            transition: opacity 0.5s ease;
+            font-size: 14px;
+            text-align: left;
+            position: relative;
+            animation: fadeIn 1s ease-in-out;
         }
-
-        .testimoni-card.show {
-            opacity: 1;
+        .testimoni-card h3 {
+            color: yellow;
         }
-
-        .testimoni-name {
-            font-weight: bold;
-            font-size: 20px;
-            color: #FFD700;
-        }
-
-        .testimoni-profesi {
-            font-style: italic;
-            color: #ddd;
-            margin-bottom: 10px;
-        }
-
         .testimoni-text {
-            font-size: 16px;
-            color: #fff;
+            font-style: italic;
+            margin-top: 5px;
         }
-
-        footer {
-            padding: 10px;
-            background-color: #222;
-            margin-top: 20px;
+        .profil {
+            margin-top: 30px;
+            text-align: center;
+        }
+        .profil img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 3px solid yellow;
+        }
+        .profil p {
+            margin-top: 10px;
+            font-size: 16px;
+        }
+        .social-links a {
+            color: yellow;
+            text-decoration: none;
+            margin: 5px;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
         }
     </style>
 </head>
 <body>
 
+    <!-- Navbar -->
     <div class="navbar">
-        <span>⚡ Portofolio Akbar</span>
-        <span id="battery-info">Baterai: Mengambil data...</span>
-        <span id="time-info">Waktu: ...</span>
+        <span id="battery-info">Baterai: 100%</span>
+        <span id="time-info">Waktu: -</span>
     </div>
 
-    <section class="hero">
-        <h1>Akbar - Web Developer</h1>
-        <p>Membuat website <a href="https://wa.me/6287825946251" style="color: yellow;">Hubungi Saya</a></p>
-    </section>
+    <!-- Kontainer -->
+    <div class="container">
+        <h2>Testimoni Pengguna</h2>
+        <div class="testimoni-card" id="testimoni1">
+            <h3 id="nama1"></h3>
+            <p><strong id="profesi1"></strong></p>
+            <p class="testimoni-text" id="isi1"></p>
+        </div>
+        <div class="testimoni-card" id="testimoni2">
+            <h3 id="nama2"></h3>
+            <p><strong id="profesi2"></strong></p>
+            <p class="testimoni-text" id="isi2"></p>
+        </div>
+        <div class="testimoni-card" id="testimoni3">
+            <h3 id="nama3"></h3>
+            <p><strong id="profesi3"></strong></p>
+            <p class="testimoni-text" id="isi3"></p>
+        </div>
 
-    <section class="container">
-        <h2>Testimoni</h2>
-        <div class="testimoni-container">
-            <div class="testimoni-card show" id="testimoni1">
-                <span class="testimoni-name" id="testimoni1-nama">Memuat...</span>
-                <span class="testimoni-profesi" id="testimoni1-profesi">Memuat...</span>
-                <p class="testimoni-text" id="testimoni1-text">Memuat testimoni...</p>
-            </div>
-
-            <div class="testimoni-card show" id="testimoni2">
-                <span class="testimoni-name" id="testimoni2-nama">Memuat...</span>
-                <span class="testimoni-profesi" id="testimoni2-profesi">Memuat...</span>
-                <p class="testimoni-text" id="testimoni2-text">Memuat testimoni...</p>
-            </div>
-
-            <div class="testimoni-card show" id="testimoni3">
-                <span class="testimoni-name" id="testimoni3-nama">Memuat...</span>
-                <span class="testimoni-profesi" id="testimoni3-profesi">Memuat...</span>
-                <p class="testimoni-text" id="testimoni3-text">Memuat testimoni...</p>
+        <!-- Profil User -->
+        <div class="profil">
+            <img src="20250114_175407.png" alt="Profil User">
+            <p><strong>Nama:</strong> Akbar</p>
+            <p><strong>Profesi:</strong> Developer & AI Enthusiast</p>
+            <p><strong>Media Sosial:</strong></p>
+            <div class="social-links">
+                <a href="https://instagram.com/dash1.id" target="_blank">Instagram</a> |
+                <a href="https://facebook.com/BarzxSta" target="_blank">Facebook</a> |
+                <a href="https://t.me/Bzdev" target="_blank">Telegram</a>
             </div>
         </div>
-    </section>
-
-    <footer>
-        &copy; 2025 Akbar | Portofolio Web Developer
-    </footer>
+    </div>
 
     <script>
-        function updateTime() {
-            const now = new Date();
-            const days = ['Minggu', 'Senin', 'Selasa', 'Rabu', 'Kamis', 'Jumat', 'Sabtu'];
-            const months = ['Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember'];
-            
-            const timeString = `Waktu: ${days[now.getDay()]}, ${now.getDate()} ${months[now.getMonth()]} ${now.getFullYear()} pukul ${now.getHours()}:${now.getMinutes()}:${now.getSeconds()}`;
-            document.getElementById('time-info').innerText = timeString;
-        }
+        // Update waktu & baterai di navbar
+        function updateNavbar() {
+            let now = new Date();
+            let waktu = now.toLocaleTimeString("id-ID", { hour: "2-digit", minute: "2-digit", second: "2-digit" });
+            let tanggal = now.toLocaleDateString("id-ID", { weekday: "long", day: "numeric", month: "long", year: "numeric" });
 
-        function updateBattery() {
-            navigator.getBattery().then(battery => {
+            document.getElementById("time-info").innerText = `Waktu: ${waktu}, ${tanggal}`;
+
+            // Baterai
+            navigator.getBattery().then(function (battery) {
                 let level = Math.round(battery.level * 100);
-                let charging = battery.charging ? "Mengisi" : "Tidak Mengisi";
-                document.getElementById('battery-info').innerText = `Baterai: ${level}% ${charging}`;
+                document.getElementById("battery-info").innerText = `Baterai: ${level}%`;
             });
         }
+        setInterval(updateNavbar, 1000);
+        updateNavbar();
 
-        setInterval(updateTime, 1000);
-        updateBattery();
-
+        // Ambil data testimoni
         async function loadTestimoni() {
             const files = ["testimoni.txt", "testimoni2.txt", "testimoni3.txt"];
-            let testimoniData = [];
+            let testimoniList = [];
 
-            for (let file of files) {
-                let response = await fetch(file);
-                let text = await response.text();
-                let lines = text.split("\n").filter(line => line.trim() !== "");
-                
-                for (let i = 0; i < lines.length; i += 3) {
-                    if (lines[i + 2]) {
-                        testimoniData.push({
-                            nama: lines[i],
-                            profesi: lines[i + 1],
-                            text: lines[i + 2]
-                        });
-                    }
+            for (const file of files) {
+                try {
+                    let response = await fetch(file);
+                    let text = await response.text();
+                    let parsedTestimoni = parseTestimoni(text);
+                    testimoniList = testimoniList.concat(parsedTestimoni);
+                } catch (error) {
+                    console.error("Gagal memuat:", file, error);
                 }
             }
-
-            function updateTestimoni() {
-                let shuffled = testimoniData.sort(() => Math.random() - 0.5);
-                let elements = ["testimoni1", "testimoni2", "testimoni3"];
-
-                elements.forEach((id, index) => {
-                    let testimoni = shuffled[index % shuffled.length];
-                    document.getElementById(id + "-nama").innerText = testimoni.nama;
-                    document.getElementById(id + "-profesi").innerText = testimoni.profesi;
-                    document.getElementById(id + "-text").innerText = `"${testimoni.text}"`;
-                });
-
-                setTimeout(updateTestimoni, 5000);
-            }
-
-            updateTestimoni();
+            return testimoniList;
         }
 
-        loadTestimoni();
+        function parseTestimoni(text) {
+            let entries = text.split("---").map(entry => entry.trim()).filter(entry => entry);
+            return entries.map(entry => {
+                let match = entry.match(/Nama: (.+?)\nProfesi: (.+?)\nTestimoni: "(.+?)"/);
+                return match ? { nama: match[1], profesi: match[2], isi: match[3] } : null;
+            }).filter(entry => entry !== null);
+        }
+
+        async function updateTestimoni() {
+            let data = await loadTestimoni();
+            if (data.length < 3) return;
+
+            function getRandomIndexes() {
+                let indexes = [];
+                while (indexes.length < 3) {
+                    let rand = Math.floor(Math.random() * data.length);
+                    if (!indexes.includes(rand)) indexes.push(rand);
+                }
+                return indexes;
+            }
+
+            function updateUI() {
+                let [i1, i2, i3] = getRandomIndexes();
+                document.getElementById("nama1").innerText = data[i1].nama;
+                document.getElementById("profesi1").innerText = data[i1].profesi;
+                document.getElementById("isi1").innerText = `"${data[i1].isi}"`;
+
+                document.getElementById("nama2").innerText = data[i2].nama;
+                document.getElementById("profesi2").innerText = data[i2].profesi;
+                document.getElementById("isi2").innerText = `"${data[i2].isi}"`;
+
+                document.getElementById("nama3").innerText = data[i3].nama;
+                document.getElementById("profesi3").innerText = data[i3].profesi;
+                document.getElementById("isi3").innerText = `"${data[i3].isi}"`;
+            }
+
+            updateUI();
+            setInterval(updateUI, 3000);
+        }
+
+        updateTestimoni();
     </script>
+
 </body>
 </html>
