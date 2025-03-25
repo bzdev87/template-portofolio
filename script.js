@@ -1,48 +1,58 @@
-// Update Waktu
+let testimoniData = {
+    "testimoni1": "testimoni.txt",
+    "testimoni2": "testimoni2.txt",
+    "testimoni3": "testimoni3.txt"
+};
+
+// Fungsi untuk mengambil data testimoni secara acak
+async function loadTestimoni(file) {
+    try {
+        let response = await fetch(file);
+        let text = await response.text();
+        let entries = text.split("---").map(entry => entry.trim()).filter(entry => entry);
+        return entries.length > 0 ? entries[Math.floor(Math.random() * entries.length)] : "Testimoni tidak tersedia.";
+    } catch (error) {
+        console.error("Gagal memuat testimoni dari:", file);
+        return "Gagal memuat testimoni.";
+    }
+}
+
+// Memuat testimoni ke tempatnya masing-masing
+async function loadAllTestimoni() {
+    for (let key in testimoniData) {
+        document.getElementById(key).textContent = await loadTestimoni(testimoniData[key]);
+    }
+}
+
+loadAllTestimoni();
+
+// Fungsi update waktu real-time
 function updateTime() {
-    const now = new Date();
-    const timeString = now.toLocaleString("id-ID", { weekday: "long", day: "2-digit", month: "long", year: "numeric", hour: "2-digit", minute: "2-digit", second: "2-digit" });
-    document.getElementById("time-status").innerText = `Waktu: ${timeString}`;
+    let now = new Date();
+    let jam = now.getHours().toString().padStart(2, "0");
+    let menit = now.getMinutes().toString().padStart(2, "0");
+    let detik = now.getSeconds().toString().padStart(2, "0");
+    let tanggal = now.toLocaleDateString("id-ID", { weekday: 'long', day: '2-digit', month: 'long', year: 'numeric' });
+    document.getElementById("time-info").textContent = `Waktu: ${tanggal} ${jam}:${menit}:${detik}`;
 }
 
 setInterval(updateTime, 1000);
-updateTime();
+updateTime(); // Jalankan langsung saat halaman dibuka
 
-// Load Testimoni
-async function loadTestimoni(file, elementId) {
-    try {
-        const response = await fetch(file);
-        const text = await response.text();
-        document.getElementById(elementId).innerText = text;
-    } catch {
-        document.getElementById(elementId).innerText = "Testimoni gagal dimuat.";
-    }
+// Fungsi update status baterai
+function updateBattery(battery) {
+    let level = Math.round(battery.level * 100);
+    let charging = battery.charging ? "⚡ Mengisi" : "";
+    document.getElementById("battery-info").textContent = `Baterai: ${level}% ${charging}`;
 }
 
-loadTestimoni("testimoni.txt", "testimoni-text-1");
-loadTestimoni("testimoni2.txt", "testimoni-text-2");
-loadTestimoni("testimoni3.txt", "testimoni-text-3");
-
-// Efek Typing
-const typingText = "Akbar - Web Developer";
-const typingDesc = "Membuat website modern & elegan";
-let index = 0, descIndex = 0;
-
-function typeEffect() {
-    if (index < typingText.length) {
-        document.getElementById("typing-text").innerHTML += typingText.charAt(index);
-        index++;
-        setTimeout(typeEffect, 100);
-    }
+// Deteksi status baterai
+if (navigator.getBattery) {
+    navigator.getBattery().then(battery => {
+        updateBattery(battery);
+        battery.addEventListener("levelchange", () => updateBattery(battery));
+        battery.addEventListener("chargingchange", () => updateBattery(battery));
+    });
+} else {
+    document.getElementById("battery-info").textContent = "Baterai: Tidak didukung";
 }
-
-function typeDescEffect() {
-    if (descIndex < typingDesc.length) {
-        document.getElementById("typing-desc").innerHTML += typingDesc.charAt(descIndex);
-        descIndex++;
-        setTimeout(typeDescEffect, 100);
-    }
-}
-
-setTimeout(typeEffect, 500);
-setTimeout(typeDescEffect, 2000);
